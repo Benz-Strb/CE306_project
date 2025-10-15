@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         <nav className="bg-white p-4 shadow-md">
             <div className="w-full flex items-center justify-between md:justify-start md:space-x-8 px-4">
                 <Link to="/" className="text-blue-600 text-2xl font-bold">
-                    MySite
+                    LongDo
                 </Link>
 
                 <div className="hidden md:flex space-x-6 flex-grow justify-end">
@@ -30,9 +30,7 @@ const Navbar: React.FC = () => {
                     <Link to="/#movies" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">ภาพยนตร์</Link>
                     <Link to="/#series" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">ซีรี่ส์</Link>
                     <Link to="/#favorite" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">รายการที่ถูกใจ</Link>
-                    <Link to="/login" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">
-                        Login
-                    </Link>
+                    <Link to="/login" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">Login</Link>
                 </div>
 
                 <div className="md:hidden">
