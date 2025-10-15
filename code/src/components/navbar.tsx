@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
     const [open, setOpen] = useState(false);
@@ -9,36 +10,29 @@ const Navbar: React.FC = () => {
 
     const navLinks = (
         <>
-            <a href="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">หน้าหลัก</a>
-            <a href="#movies" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">ภาพยนตร์</a>
-            <a href="#series" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">ซีรี่ส์</a>
-            <a href="#favorite" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">รายการที่ถูกใจ</a>
-            <a href="code\src\Login.tsx" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">Login</a>
+            <Link to="/" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">หน้าหลัก</Link>
+            <Link to="/#movies" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">ภาพยนตร์</Link>
+            <Link to="/#series" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">ซีรี่ส์</Link>
+            <Link to="/#favorite" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">รายการที่ถูกใจ</Link>
+            <Link to="/login" className="block px-4 py-2 text-gray-800 hover:bg-gray-200 rounded-md transition-colors duration-200">Login</Link>
         </>
     );
 
     return (
         <nav className="bg-white p-4 shadow-md">
             <div className="w-full flex items-center justify-between md:justify-start md:space-x-8 px-4">
-                <a href="/" className="text-blue-600 text-2xl font-bold">
+                <Link to="/" className="text-blue-600 text-2xl font-bold">
                     MySite
-                </a>
+                </Link>
 
                 <div className="hidden md:flex space-x-6 flex-grow justify-end">
-                    <a href="/" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">หน้าหลัก</a>
-                    <a href="#movies" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">ภาพยนตร์</a>
-                    <a href="#series" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">ซีรี่ส์</a>
-                    <a href="#favorite" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">รายการที่ถูกใจ</a>
-                    <a 
-                        href="/Login" 
-                        onClick={(e) => {
-                            e.preventDefault(); // ป้องกันการทำงานปกติของลิงก์
-                            window.location.href = '/login'; // สั่งให้เบราว์เซอร์ไปที่ URL ใหม่ (และโหลดใหม่ทั้งหน้า)
-                        }}
-                        className="text-gray-800 hover:text-blue-600 transition-colors duration-200"
-                    >                   
+                    <Link to="/" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">หน้าหลัก</Link>
+                    <Link to="/#movies" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">ภาพยนตร์</Link>
+                    <Link to="/#series" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">ซีรี่ส์</Link>
+                    <Link to="/#favorite" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">รายการที่ถูกใจ</Link>
+                    <Link to="/login" className="text-gray-800 hover:text-blue-600 transition-colors duration-200">
                         Login
-                    </a>
+                    </Link>
                 </div>
 
                 <div className="md:hidden">
