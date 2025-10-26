@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar';
 import './App.css';
 import Poster from './components/Poster';
-import Login from './Login';
+import Login from './components/LoginPage';
 import Lists from './components/lists';
 
 

@@ -3,39 +3,39 @@ import React from "react";
 const Lists = [
   {
     id: 1,
-    imageUrl: '/public/poster/A_Star_is_Born.png',
+    imageUrl: 'code\public\poster\moive\Action\avengers-endgame.jpg',
   },
   {
     id: 2,
-    imageUrl: '/public/poster/big_hero_6.jpg',
+    imageUrl: '',
   },
    {
     id: 3,
-    imageUrl: '/public/poster/Big_Hero_6_(film)_poster.jpg',
+    imageUrl: '',
   },
    {
     id: 4,
-    imageUrl: '/public/poster/Big_Hero_6_(film)_poster.jpg',
+    imageUrl: '',
   },
    {
     id: 5,
-    imageUrl: '/public/poster/Big_Hero_6_(film)_poster.jpg',
+    imageUrl: '',
   },
    {
     id: 6,
-    imageUrl: '/public/poster/Big_Hero_6_(film)_poster.jpg',
+    imageUrl: '',
   },
    {
     id: 7,
-    imageUrl: '/public/poster/Big_Hero_6_(film)_poster.jpg',
+    imageUrl: '',
   },
    {
     id: 8,
-    imageUrl: '/poster/Big_Hero_6_(film)_poster.jpg',
+    imageUrl: '',
   },
    {
     id: 9,
-    imageUrl: '/public/poster/A_Star_is_Born.png',
+    imageUrl: '',
   },
 
 ]
