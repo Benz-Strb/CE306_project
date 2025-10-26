@@ -11,12 +11,15 @@ const HomePage: React.FC = () => (
     <main className="flex-grow p-8">
         <div className='shadow rounded-lg p-8 mb-8'>
           <div className="bg-gray-300 rounded-xl shadow-lg p-6 container mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">รายการสินค้าของเรา</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">รายการแนะนำ</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {Lists.map(list => (
                 <Poster
                   key={list.id}
                   imageUrl={list.imageUrl}
+                  title={list.title}
+                  rating={list.rating}
+                  episodes={list.episodes}
                 />
               ))}
             </div>

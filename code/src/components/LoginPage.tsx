@@ -19,23 +19,19 @@ const Login: React.FC = () => {
   };
 
   return (
-    // ใช้ Tailwind จัดการ Layout ทั้งหมด
     <div className="flex justify-center items-center min-h-[80vh] bg-gray-100 px-4">
-      {/* ใช้ Tailwind จัดการสไตล์ของฟอร์ม */}
       <form className="bg-white p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-md" onSubmit={handleSubmit} noValidate>
         <h2 className="text-3xl font-bold text-left text-gray-900 mb-6">
           Sign In
         </h2>
 
-        {/* จัดการกลุ่ม Input ด้วย div และเว้นระยะด้วย space-y-5 */}
         <div className="space-y-5">
           <div>
             <input
-              className={`w-full transition-transform duration-200 bg-white/80 border rounded-md px-3 py-2 placeholder-gray-500 text-black ${
-                errors.email ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full transition-transform duration-200 hover:scale-105 bg-white/80 border rounded-md px-3 py-2 placeholder-gray-500 text-black ${errors.email ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
               type="email"
               id="email"
+              title='Please enter your Email'
               placeholder="Email"
               value={email}
               onChange={(e) => {
@@ -50,11 +46,10 @@ const Login: React.FC = () => {
 
           <div className="relative">
             <input
-              className={`w-full pr-10 transition-transform duration-200 bg-white/80 border rounded-md px-3 py-2 placeholder-gray-500 text-black ${
-                errors.password ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full pr-10 transition-transform duration-200 hover:scale-105 bg-white/80 border rounded-md px-3 py-2 placeholder-gray-500 text-black ${errors.password ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
               type={showPassword ? 'text' : 'password'}
               id="password"
+              title='Please enter your Password'
               placeholder="Password"
               value={password}
               onChange={(e) => {
@@ -66,11 +61,12 @@ const Login: React.FC = () => {
               type="button"
               onClick={() => setShowPassword(!showPassword)}
               className="absolute inset-y-0 right-0 px-3 flex items-center text-gray-500 hover:text-gray-700 focus:outline-none bg-transparent border-none"
+              title={showPassword ? "Don't show your Password" : "Show your Password"}
             >
               {showPassword ? <BsEyeSlash /> : <BsEye />}
             </button>
           </div>
-           {errors.password && (
+          {errors.password && (
             <p className="text-red-600 text-sm -mt-3">{errors.password}</p>
           )}
         </div>
