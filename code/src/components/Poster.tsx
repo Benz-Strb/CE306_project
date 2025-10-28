@@ -1,3 +1,5 @@
+// src/components/Poster.tsx
+
 import React from 'react';
 import { BsPlayFill, BsPlus, BsHandThumbsUp, BsChevronDown } from 'react-icons/bs';
 
@@ -7,11 +9,18 @@ interface PosterProps {
   title?: string;
   rating?: string;
   episodes?: string;
+  genres?: string[];
 }
 
-const Poster: React.FC<PosterProps> = ({ imageUrl, title = "", rating = "", episodes = "" }) => {
+const Poster: React.FC<PosterProps> = ({
+  imageUrl,
+  title = "",
+  rating = "",
+  episodes = "",
+  genres = [] 
+}) => {
   return (
-    <div className="group relative w-full md:w-80 bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 my-4 z-0 hover:z-20">
+    <div className="group relative w-full bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 my-4 z-0 hover:z-20">
       <div className="relative w-full overflow-hidden aspect-w-16 aspect-h-9 md:aspect-w-16 md:aspect-h-9">
         <img
           className="w-full h-full object-cover object-center transition-opacity duration-300 group-hover:opacity-50"
@@ -20,7 +29,14 @@ const Poster: React.FC<PosterProps> = ({ imageUrl, title = "", rating = "", epis
         />
       </div>
 
-      <div className="absolute inset-0 z-10 rounded-xl overflow-hidden opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100 transition-all duration-300 ease-in-out delay-150 group-hover:delay-0 flex flex-col bg-gray-800 shadow-2xl">
+      <div
+        className="
+          absolute inset-0 z-10 rounded-xl overflow-hidden
+          opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100
+          transition-all duration-300 ease-in-out delay-150 group-hover:delay-0
+          flex flex-col bg-gray-800 shadow-2xl
+        "
+      >
         <div className="relative w-full h-1/2 overflow-hidden">
           <img
             className="w-full h-full object-cover object-center"
@@ -51,6 +67,15 @@ const Poster: React.FC<PosterProps> = ({ imageUrl, title = "", rating = "", epis
           <div className="flex items-center space-x-2 text-xs text-gray-400 mb-2">
             <span className="border border-gray-500 px-1">{rating}</span>
             <span>{episodes}</span>
+          </div>
+
+          <div className="flex flex-wrap items-center text-xs mt-auto"> {/* เพิ่ม mt-auto ถ้าต้องการให้ genres อยู่ล่างสุด */}
+            {genres?.map((genre, index) => (
+              <React.Fragment key={genre}>
+                <span className="whitespace-nowrap">{genre}</span>
+                {index < genres.length - 1 && <span className="mx-1 text-gray-500">•</span>}
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>

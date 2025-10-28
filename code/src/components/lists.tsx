@@ -43,6 +43,13 @@ const Lists = [
     rating: '',
     episodes: "",
   },
+  {
+    id: 7,
+    imageUrl: '/poster/moive/Action/mission-impossible-fallout.jpg',
+    title: '',
+    rating: '',
+    episodes: "",
+  },
 
 ]
 
