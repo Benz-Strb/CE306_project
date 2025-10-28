@@ -1,44 +1,22 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar';
 import './App.css';
-import Poster from './components/Poster';
-import Login from './components/LoginPage';
-import Lists from './components/lists';
+import LoginPage from './pages/LoginPage';
+import HomePage from './pages/HomePage';
+import RegisterPage from './pages/RegisterPage';
 
+function App() {
+  const [currentPage, setCurrentPage] = useState('home');
 
-const HomePage: React.FC = () => (
-    <main className="flex-grow p-8">
-        <div className='shadow rounded-lg p-8 mb-8'>
-          <div className="bg-gray-300 rounded-xl shadow-lg p-6 container mx-auto">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-800 text-center mb-8">รายการแนะนำ</h2>
-            <div className="flex flex-wrap justify-center gap-6">
-              {Lists.map(list => (
-                <Poster
-                  key={list.id}
-                  imageUrl={list.imageUrl}
-                  title={list.title}
-                  rating={list.rating}
-                  episodes={list.episodes}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-    </main>
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <Navbar currentPage={currentPage} onNavigate={setCurrentPage} />
+      {currentPage === 'home' && <HomePage />}
+      {currentPage === 'login' && <LoginPage onNavigate={setCurrentPage} />}
+      {currentPage === 'register' && <RegisterPage onNavigate={setCurrentPage} />}
+    </div>
   );
-
-
-const App: React.FC = () => {
-    return (
-            <div className="bg-gray-100 min-h-screen flex flex-col">
-                <Navbar />
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/login" element={<Login />} />
-                </Routes>
-            </div>
-        );
-    };
+}
 
 export default App;
