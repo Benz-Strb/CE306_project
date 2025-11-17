@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { BsEye, BsEyeSlash } from 'react-icons/bs';
+import { Link, useNavigate } from 'react-router-dom';
 
-const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavigate }) => {
+const Register: React.FC = () => {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -12,6 +13,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -51,14 +53,14 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
     if (Object.keys(newErrors).length === 0) {
       console.log('สมัครสมาชิกด้วยข้อมูล:', formData);
       alert('สมัครสมาชิกสำเร็จ!');
-      onNavigate('login');
+      navigate('/login');
     }
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 px-4 py-8">
-      <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-2xl w-full max-w-md border border-gray-100">
-        <h2 className="text-3xl font-bold text-left text-gray-900 mb-2">
+    <div className="flex justify-center items-center min-h-screen px-4 py-8">
+      <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-md border border-purple-200">
+        <h2 className="text-3xl font-bold text-left mb-2 text-purple-700">
           สมัครสมาชิก
         </h2>
         <p className="text-gray-600 text-sm mb-6">สร้างบัญชีของคุณเพื่อเริ่มต้นใช้งาน</p>
@@ -68,7 +70,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">ชื่อ</label>
               <input
-                className={`w-full transition-all duration-200 hover:shadow-md bg-gray-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.firstName ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
+                className={`w-full transition-all duration-200 hover:shadow-md bg-purple-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.firstName ? 'border-red-500 ring-1 ring-red-500' : 'border-purple-300'}`}
                 type="text"
                 placeholder="ชื่อ"
                 value={formData.firstName}
@@ -82,7 +84,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">นามสกุล</label>
               <input
-                className={`w-full transition-all duration-200 hover:shadow-md bg-gray-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.lastName ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
+                className={`w-full transition-all duration-200 hover:shadow-md bg-purple-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.lastName ? 'border-red-500 ring-1 ring-red-500' : 'border-purple-300'}`}
                 type="text"
                 placeholder="นามสกุล"
                 value={formData.lastName}
@@ -97,7 +99,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">อีเมล</label>
             <input
-              className={`w-full transition-all duration-200 hover:shadow-md bg-gray-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.email ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
+              className={`w-full transition-all duration-200 hover:shadow-md bg-purple-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.email ? 'border-red-500 ring-1 ring-red-500' : 'border-purple-300'}`}
               type="email"
               placeholder="example@email.com"
               value={formData.email}
@@ -112,7 +114,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
             <label className="block text-sm font-medium text-gray-700 mb-1">รหัสผ่าน</label>
             <div className="relative">
               <input
-                className={`w-full pr-10 transition-all duration-200 hover:shadow-md bg-gray-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.password ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
+                className={`w-full pr-10 transition-all duration-200 hover:shadow-md bg-purple-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.password ? 'border-red-500 ring-1 ring-red-500' : 'border-purple-300'}`}
                 type={showPassword ? 'text' : 'password'}
                 placeholder="••••••••"
                 value={formData.password}
@@ -121,7 +123,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
               <button
                 type="button"
                 onClick={() => setShowPassword(!showPassword)}
-                className="absolute inset-y-0 right-0 px-3 flex items-center text-gray-500 hover:text-gray-700 focus:outline-none bg-transparent border-none"
+                className="absolute inset-y-0 right-0 px-3 flex items-center text-purple-500 hover:text-purple-700 focus:outline-none bg-transparent border-none"
               >
                 {showPassword ? <BsEyeSlash size={20} /> : <BsEye size={20} />}
               </button>
@@ -135,7 +137,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
             <label className="block text-sm font-medium text-gray-700 mb-1">ยืนยันรหัสผ่าน</label>
             <div className="relative">
               <input
-                className={`w-full pr-10 transition-all duration-200 hover:shadow-md bg-gray-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.confirmPassword ? 'border-red-500 ring-1 ring-red-500' : 'border-gray-300'}`}
+                className={`w-full pr-10 transition-all duration-200 hover:shadow-md bg-purple-50 border rounded-lg px-4 py-3 placeholder-gray-400 text-black focus:ring-2 focus:ring-purple-500 focus:border-transparent ${errors.confirmPassword ? 'border-red-500 ring-1 ring-red-500' : 'border-purple-300'}`}
                 type={showConfirmPassword ? 'text' : 'password'}
                 placeholder="••••••••"
                 value={formData.confirmPassword}
@@ -144,7 +146,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                className="absolute inset-y-0 right-0 px-3 flex items-center text-gray-500 hover:text-gray-700 focus:outline-none bg-transparent border-none"
+                className="absolute inset-y-0 right-0 px-3 flex items-center text-purple-500 hover:text-purple-700 focus:outline-none bg-transparent border-none"
               >
                 {showConfirmPassword ? <BsEyeSlash size={20} /> : <BsEye size={20} />}
               </button>
@@ -157,7 +159,7 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
 
         <button
           onClick={handleSubmit}
-          className="mt-6 w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+          className="mt-6 w-full bg-gradient-to-r from-purple-500 to-yellow-400 text-white py-3 rounded-lg hover:from-purple-600 hover:to-yellow-500 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
         >
           สมัครสมาชิก
         </button>
@@ -165,13 +167,12 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
         <div className="mt-6 text-center">
           <p className="text-gray-600 text-sm">
             มีบัญชีอยู่แล้ว?{' '}
-            <button
-              type="button"
-              onClick={() => onNavigate('login')}
+            <Link
+              to="/login"
               className="text-purple-600 hover:text-purple-700 font-semibold bg-transparent border-none cursor-pointer underline"
             >
               เข้าสู่ระบบ
-            </button>
+            </Link>
           </p>
         </div>
       </div>
@@ -179,4 +180,4 @@ const RegisterPage: React.FC<{ onNavigate: (page: string) => void }> = ({ onNavi
   );
 };
 
-export default RegisterPage;
+export default Register;

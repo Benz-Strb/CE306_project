@@ -1,84 +1,119 @@
-// src/components/Poster.tsx
-
-import React from 'react';
-import { BsPlayFill, BsPlus, BsHandThumbsUp, BsChevronDown } from 'react-icons/bs';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { BsFillPlayFill, BsPlusLg, BsCheckLg, BsChevronDown } from 'react-icons/bs';
+import type { MediaType, Media, Genre } from '../types/types';
+import { useMyList } from '../context/MyListContext';
+import { useAuth } from '../context/AuthContext';
 
 interface PosterProps {
   id: number;
   imageUrl: string;
-  title?: string;
-  rating?: string;
-  episodes?: string;
-  genres?: string[];
+  title: string;
+  rating: string;
+  episodes: string;
+  genres: Genre[];
+  type?: MediaType;
+  trailerUrl?: string;
 }
 
-const Poster: React.FC<PosterProps> = ({
-  imageUrl,
-  title = "",
-  rating = "",
-  episodes = "",
-  genres = [] 
-}) => {
+const Poster: React.FC<PosterProps> = (props) => {
+  const { id, imageUrl, title, rating, episodes, genres, type, trailerUrl } = props;
+  
+  const [isHovered, setIsHovered] = useState(false);
+  
+  const { addToMyList, removeFromMyList, isInMyList } = useMyList();
+  
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  
+  const inList = isInMyList(id);
+  
+  const detailUrl = `/details/${type}/${id}`; 
+
+  const handleMouseEnter = () => setIsHovered(true);
+  const handleMouseLeave = () => setIsHovered(false);
+
+  const toggleMyList = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!isAuthenticated) {
+      const wantsToLogin = window.confirm("คุณยังไม่ได้เข้าสู่ระบบ\nกรุณาเข้าสู่ระบบเพื่อเก็บรายการของฉัน\n\nกด 'ตกลง' เพื่อไปหน้าเข้าสู่ระบบ");
+      if (wantsToLogin) {
+        navigate('/login');
+      }
+      return;
+    }
+    
+    if (inList) {
+      removeFromMyList(id);
+    } else {
+      const mediaObj: Media = { 
+        id, imageUrl, title, rating, episodes, genres, 
+        type: type!, 
+        nationality: 'USA',
+        description: '',
+        trailerUrl 
+      };
+      addToMyList(mediaObj);
+    }
+  };
+
   return (
-    <div className="group relative w-full bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col transition-transform duration-300 hover:scale-105 my-4 z-0 hover:z-20">
-      <div className="relative w-full overflow-hidden aspect-w-16 aspect-h-9 md:aspect-w-16 md:aspect-h-9">
-        <img
-          className="w-full h-full object-cover object-center transition-opacity duration-300 group-hover:opacity-50"
-          src={imageUrl}
-          alt={title || 'Poster'}
+    <div 
+      className="relative group w-full h-full transition-all duration-300 ease-in-out transform-gpu hover:scale-125 hover:z-40"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Link to={detailUrl} className="block w-full h-full rounded-lg overflow-hidden shadow-md relative">
+        <img 
+          src={imageUrl} 
+          alt={title} 
+          className="w-full h-full object-cover rounded-lg"
         />
-      </div>
+      </Link>
 
-      <div
-        className="
-          absolute inset-0 z-10 rounded-xl overflow-hidden
-          opacity-0 invisible scale-95 group-hover:opacity-100 group-hover:visible group-hover:scale-100
-          transition-all duration-300 ease-in-out delay-150 group-hover:delay-0
-          flex flex-col bg-gray-800 shadow-2xl
-        "
-      >
-        <div className="relative w-full h-1/2 overflow-hidden">
-          <img
-            className="w-full h-full object-cover object-center"
-            src={imageUrl}
-            alt={title || 'Poster Preview'}
-          />
-          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30"></div>
-        </div>
-
-        <div className="p-4 flex flex-col flex-grow text-white">
-          <div className="flex items-center justify-between mb-3">
-            <div className="flex items-center space-x-2">
-              <button className="h-8 w-8 flex items-center justify-center rounded-full bg-white text-black hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-white transition-all">
-                <BsPlayFill size={24} />
-              </button>
-              <button className="h-8 w-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-300 hover:border-white hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all">
-                <BsPlus size={24} />
-              </button>
-              <button className="h-8 w-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-300 hover:border-white hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all">
-                <BsHandThumbsUp size={16} />
+      {isHovered && (
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-br from-purple-50 to-yellow-50 text-gray-900 p-3 rounded-b-lg shadow-lg transform translate-y-full group-hover:translate-y-0 transition-all duration-300 ease-out opacity-0 group-hover:opacity-100 delay-150 z-20 border-2 border-purple-200">
+          <h3 className="text-base font-semibold truncate mb-1 text-purple-900">{title}</h3>
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex space-x-2">
+              <Link 
+                to={detailUrl}
+                className="bg-gradient-to-r from-purple-500 to-yellow-400 text-white p-2 rounded-full hover:from-purple-600 hover:to-yellow-500 transition-all shadow-md flex items-center justify-center" 
+                aria-label="Play"
+              >
+                <BsFillPlayFill className="w-4 h-4" />
+              </Link>
+              
+              <button 
+                onClick={toggleMyList}
+                className={`border-2 p-2 rounded-full transition-all shadow-md flex items-center justify-center ${inList ? 'bg-white border-purple-500 text-purple-600' : 'border-purple-300 text-purple-700 hover:bg-purple-50 hover:border-purple-500'}`}
+                aria-label="Toggle My List"
+              >
+                {inList ? (
+                  <BsCheckLg className="w-4 h-4" />
+                ) : (
+                  <BsPlusLg className="w-4 h-4" />
+                )}
               </button>
             </div>
-            <button className="h-8 w-8 flex items-center justify-center rounded-full border-2 border-gray-400 text-gray-300 hover:border-white hover:text-white focus:outline-none focus:ring-2 focus:ring-gray-400 transition-all">
-              <BsChevronDown size={16} />
-            </button>
-          </div>
+            
+            <Link 
+              to={detailUrl}
+              className="border-2 border-purple-300 text-purple-700 p-2 rounded-full hover:bg-purple-50 transition-all shadow-md flex items-center justify-center" 
+              aria-label="More info"
+            >
+              <BsChevronDown className="w-4 h-4" />
+            </Link>
 
-          <div className="flex items-center space-x-2 text-xs text-gray-400 mb-2">
-            <span className="border border-gray-500 px-1">{rating}</span>
-            <span>{episodes}</span>
           </div>
-
-          <div className="flex flex-wrap items-center text-xs mt-auto"> {/* เพิ่ม mt-auto ถ้าต้องการให้ genres อยู่ล่างสุด */}
-            {genres?.map((genre, index) => (
-              <React.Fragment key={genre}>
-                <span className="whitespace-nowrap">{genre}</span>
-                {index < genres.length - 1 && <span className="mx-1 text-gray-500">•</span>}
-              </React.Fragment>
-            ))}
+          <div className="text-xs text-gray-700 space-y-1">
+            <p className="font-medium">{rating} | {episodes}</p>
+            <p className="truncate">{genres.join(', ')}</p>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };
