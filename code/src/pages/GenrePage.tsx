@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import db from '../data/database';
 import type { Media, Genre, MediaType, Nationality } from '../types/types';
@@ -17,12 +17,20 @@ const formatGenreFromUrl = (genreParam: string = ""): Genre => {
 
 const movieGenres = ['Action', 'Drama', 'Comedy', 'Horror', 'Sci-fi'];
 const seriesGenres = ['Comedy', 'Crime Thriller', 'Drama', 'Fantasy', 'Sci-fi'];
-const allNationalities: Nationality[] = [...new Set(db.map(item => item.nationality))];
 
 export const GenrePage: React.FC = () => {
   const { genre: genreParam } = useParams<{ genre: string }>();
   const location = useLocation();
   const navigate = useNavigate(); 
+
+  // รวมข้อมูลจาก database + localStorage
+  const [allMedia, setAllMedia] = useState<Media[]>([]);
+
+  useEffect(() => {
+    const adminMovies = localStorage.getItem('admin-movies');
+    const parsedAdminMovies = adminMovies ? JSON.parse(adminMovies) : [];
+    setAllMedia([...db, ...parsedAdminMovies]);
+  }, []);
 
   const mediaType: MediaType | null = location.pathname.startsWith('/movies') 
     ? 'movie' 
@@ -43,11 +51,13 @@ export const GenrePage: React.FC = () => {
     : basePath;
 
   const carouselsData = useMemo(() => {
-    const genreFilteredMedia = db.filter(item => {
+    const genreFilteredMedia = allMedia.filter(item => {
       const typeMatch = !mediaType || item.type === mediaType;
       const genreMatch = !targetGenre || item.genres.includes(targetGenre);
       return typeMatch && genreMatch;
     });
+
+    const allNationalities: Nationality[] = [...new Set(allMedia.map(item => item.nationality))];
 
     const groupedByNationality: { [key in Nationality]?: Media[] } = {};
     for (const item of genreFilteredMedia) {
@@ -65,7 +75,7 @@ export const GenrePage: React.FC = () => {
       .filter(group => group.items.length > 0);
 
     return result;
-  }, [mediaType, targetGenre]);
+  }, [allMedia, mediaType, targetGenre]);
 
   const title = targetGenre 
     ? `${targetGenre} ${mediaType === 'movie' ? 'Movies' : 'Series'}`

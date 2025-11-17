@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import db from '../data/database';
-import { BsFillPlayFill, BsPlusLg, BsCheckLg, BsChevronDown } from 'react-icons/bs';
+import type { Media } from '../types/types';
+import { BsFillPlayFill, BsPlusLg, BsCheckLg } from 'react-icons/bs';
 import ReactPlayer from 'react-player';
 import { useMyList } from '../context/MyListContext';
 import { useAuth } from '../context/AuthContext';
@@ -9,7 +10,17 @@ import { useAuth } from '../context/AuthContext';
 export const Detail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const media = db.find(item => item.id === Number(id));
+  
+  // รวมข้อมูลจาก database + localStorage
+  const [allMedia, setAllMedia] = useState<Media[]>([]);
+  
+  useEffect(() => {
+    const adminMovies = localStorage.getItem('admin-movies');
+    const parsedAdminMovies = adminMovies ? JSON.parse(adminMovies) : [];
+    setAllMedia([...db, ...parsedAdminMovies]);
+  }, []);
+
+  const media = allMedia.find(item => item.id === Number(id));
   
   const { addToMyList, removeFromMyList, isInMyList } = useMyList();
   const { isAuthenticated } = useAuth();
@@ -83,16 +94,16 @@ export const Detail: React.FC = () => {
         <div 
           className={`absolute inset-0 bg-gradient-to-t transition-opacity duration-500 ${
             scrolled 
-              ? 'from-purple-50 via-purple-50/50 to-transparent opacity-100' 
-              : 'opacity-0'
+              ? 'from-gray-900 via-gray-900/70 to-transparent opacity-100' 
+              : 'from-gray-900/60 via-transparent to-transparent opacity-100'
           }`}
         ></div>
       </div>
 
       {/* Content Section */}
-      <div className="container mx-auto px-4 md:px-8 -mt-20 md:-mt-32 relative z-10">
+      <div className="container mx-auto px-4 md:px-8 mt-8 relative z-10">
         
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{media.title}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-white drop-shadow-lg mb-4">{media.title}</h1>
         
         <div className="max-w-3xl">
           <div className="flex items-center justify-between mb-4">
@@ -112,22 +123,20 @@ export const Detail: React.FC = () => {
                    <BsPlusLg className="w-6 h-6" />
                 )}
               </button>
-              
-              <button className="border-2 border-gray-400 text-gray-800 p-3 rounded-full hover:bg-gray-50 hover:border-purple-500 transition-colors shadow-md" aria-label="More info">
-                <BsChevronDown className="w-6 h-6" />
-              </button>
             </div>
           </div>
 
-          <div className="text-lg text-gray-700 space-y-2 mb-4">
-            <p className="font-medium">{media.rating} | {media.episodes}</p>
+          <div className="text-lg text-white drop-shadow-md space-y-2 mb-4">
+            <p className="font-medium">
+              {media.rating} | {media.episodes}
+            </p>
             <p className="text-base">{media.genres.join(', ')}</p>
-            <p className="text-base text-gray-600">สัญชาติ: {media.nationality}</p>
+            <p className="text-base">สัญชาติ: {media.nationality}</p>
           </div>
 
-          <div className="text-gray-800 bg-white/80 backdrop-blur-sm p-4 rounded-lg">
-            <h2 className="text-base leading-relaxed font-semibold mb-2">เรื่องย่อ</h2>
-            <p className="text-gray-700">{media.description}</p>
+          <div className="text-white bg-black/40 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-xl">
+            <h2 className="text-lg leading-relaxed font-semibold mb-3">เรื่องย่อ</h2>
+            <p className="text-gray-100 leading-relaxed">{media.description}</p>
           </div>
         </div>
       </div>

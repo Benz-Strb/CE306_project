@@ -1,7 +1,7 @@
 import type { Media } from "../types/types";
 
 const db: Media[] = [
-  // id หนัง เริ่มที่ 1, id ซีรี่ส์ เริ่มที่ 1000
+  // === Movies (id 1-59) ===
   {
     id: 1,
     imageUrl: "/poster/moive/Action/avengers-endgame.jpg",
@@ -11,9 +11,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Action", "Sci-fi", "Fantasy"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=txHncW9t7n4",
-    description:
-      'หลังจากเหตุการณ์ใน "Avengers: Infinity War" ที่ธานอสได้รวบรวมอินฟินิตี้สโตนและดีดนิ้วทำให้ประชากรครึ่งจักรวาลหายไป เหล่าอเวนเจอร์สที่รอดชีวิตต้องเผชิญกับความสิ้นหวังและความสูญเสีย แต่พวกเขายังไม่ยอมแพ้และพยายามหาวิธีย้อนเวลากลับไปเพื่อแก้ไขอดีตและนำเพื่อนๆ กลับคืนมา',
+    trailerUrl: "https://youtu.be/TcMBFSGVi1c",
+    description: 'หลังจากเหตุการณ์ใน "Avengers: Infinity War" ที่ธานอสได้รวบรวมอินฟินิตี้สโตนและดีดนิ้วทำให้ประชากรครึ่งจักรวาลหายไป เหล่าอเวนเจอร์สที่รอดชีวิตต้องเผชิญกับความสิ้นหวังและความสูญเสีย แต่พวกเขายังไม่ยอมแพ้และพยายามหาวิธีย้อนเวลากลับไปเพื่อแก้ไขอดีตและนำเพื่อนๆ กลับคืนมา',
   },
   {
     id: 2,
@@ -24,9 +23,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Action", "Crime Thriller"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=L3SybiekCGM",
-    description:
-      "จอห์น วิค อดีตนักฆ่าที่เกษียณมาใช้ชีวิตสงบกับภรรยา แต่หลังจากภรรยาเสียชีวิต เขาได้รับลูกสุนัขจากเธอเป็นของขวัญ สุดท้าย แต่ชีวิตเขาจะสงบได้ไม่นาน เมื่อ losef Tarasov ลูกชายหัวรุนแรงของแก๊งมาเฟียบุกบ้าน ขโมยรถและฆ่าสุนัข ของเขา ทำให้จอห์นต้องกลับเข้าสู่วงการเพื่อล้างแค้น ไล่ล่าลูกชายและหัวหน้าของแก๊ง ควบคู่กับการเอาตัวรอดในโลกนักฆาที่เต็มไปด้วยกฎและการแข่งขันระหว่างองค์กรนักฆ่า",
+    trailerUrl: "https://www.youtube.com/watch?v=2AUmvWm5ZDQ",
+    description: "จอห์น วิค อดีตนักฆ่าที่เกษียณมาใช้ชีวิตสงบกับภรรยา แต่หลังจากภรรยาเสียชีวิต เขาได้รับลูกสุนัขจากเธอเป็นของขวัญสุดท้าย แต่ชีวิตเขาจะสงบได้ไม่นาน เมื่อ losef Tarasov ลูกชายหัวรุนแรงของแก๊งมาเฟียบุกบ้าน ขโมยรถและฆ่าสุนัขของเขา ทำให้จอห์นต้องกลับเข้าสู่วงการเพื่อล้างแค้น ไล่ล่าลูกชายและหัวหน้าของแก๊ง ควบคู่กับการเอาตัวรอดในโลกนักฆาที่เต็มไปด้วยกฎและการแข่งขันระหว่างองค์กรนักฆ่า",
   },
   {
     id: 3,
@@ -37,9 +35,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Action", "Crime Thriller"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=gYWvwkXreaI",
-    description:
-      "เรื่องราวเกิดขึ้นใน วันคริสต์มาสอีฟ เมื่อ John McClane (บรูซ วิลลิส) ตำรวจนิวยอร์กเดินทางไปลอสแองเจลิสเพื่อต้องการคืนดีกับภรรยา Holly Gennaro McClane (โบนนี่ เบเดเลีย) ที่แยกกันอยู่และร่วมงานเลี้ยงบริษัทของเธอใน ตึก Nakatomi Plaza ขณะที่งานกำลังดำเนินไป Hans Gruber (อลัน ริคแมน) หัวหน้าทีมผู้ก่อการร้ายชาวเยอรมันพร้อม สมุนบุกเข้ายึดตึกเพื่อขโมยพันธบัตรมูลค่า 640 ล้านดอลลาร์ และจับตัวประกันทั้งหมด",
+    trailerUrl: "https://www.youtube.com/watch?v=YULE2ZipYSw",
+    description: "เรื่องราวเกิดขึ้นในวันคริสต์มาสอีฟ เมื่อ John McClane (บรูซ วิลลิส) ตำรวจนิวยอร์กเดินทางไปลอสแองเจลิสเพื่อต้องการคืนดีกับภรรยา Holly Gennaro McClane (โบนนี่ เบเดเลีย) ที่แยกกันอยู่และร่วมงานเลี้ยงบริษัทของเธอในตึก Nakatomi Plaza ขณะที่งานกำลังดำเนินไป Hans Gruber (อลัน ริคแมน) หัวหน้าทีมผู้ก่อการร้ายชาวเยอรมันพร้อมสมุนบุกเข้ายึดตึกเพื่อขโมยพันธบัตรมูลค่า 640 ล้านดอลลาร์ และจับตัวประกันทั้งหมด",
   },
   {
     id: 4,
@@ -51,8 +48,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Action"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=kCXYWpkQ9NQ",
-    description:
-      "Knight Rider 2000 เป็นภาพยนตร์ทีวีปี 1991 ที่เกิดขึ้นในปี 2000 โดยเล่าถึงการต่อสู้ของ Michael Knight และ KITT กับฆาตกรอดีตตำรวจที่สร้างความหวาดกลัวในเมือง San Antonio และการเปิดตัว Knight 4000 รถซุปเปอร์คาร์รุ่นใหม่ของ Knight Foundation",
+    description: "Knight Rider 2000 เป็นภาพยนตร์ทีวีปี 1991 ที่เกิดขึ้นในปี 2000 โดยเล่าถึงการต่อสู้ของ Michael Knight และ KITT กับฆาตกรอดีตตำรวจที่สร้างความหวาดกลัวในเมือง San Antonio และการเปิดตัว Knight 4000 รถซุปเปอร์คาร์รุ่นใหม่ของ Knight Foundation",
   },
   {
     id: 5,
@@ -64,8 +60,7 @@ const db: Media[] = [
     genres: ["Action", "Sci-fi"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=hEJnMQG9ev8",
-    description:
-      "In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshipper and a drifter named Max.",
+    description: "ในโลกหลังหายนะที่แห้งแล้งและเต็มไปด้วยความรุนแรง ผู้หญิงคนหนึ่งกบฏต่อผู้ปกครองที่โหดเหี้ยมเพื่อค้นหาบ้านเกิดของเธอ โดยได้รับความช่วยเหลือจากกลุ่มนักโทษหญิง นักบวชคลั่งศาสนา และคนพเนจรชื่อแม็กซ์",
   },
   {
     id: 6,
@@ -77,8 +72,7 @@ const db: Media[] = [
     genres: ["Action", "Sci-fi"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=wb49-oV0F78",
-    description:
-      "When an IMF mission ends badly, the world is faced with dire consequences. Ethan Hunt and his team must race against time to prevent a global catastrophe.",
+    description: "เมื่อภารกิจของ IMF จบลงอย่างแย่ โลกต้องเผชิญกับผลที่ตามมาอันเลวร้าย อีธาน ฮันท์และทีมของเขาต้องแข่งกับเวลาเพื่อป้องกันหายนะระดับโลก",
   },
   {
     id: 7,
@@ -90,8 +84,7 @@ const db: Media[] = [
     genres: ["Action", "Sci-fi"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=m6Q7KnXpNOg",
-    description:
-      "A S.W.A.T. team becomes trapped in a tenement run by a ruthless mobster and his army of killers and thugs.",
+    description: "ทีม S.W.A.T. ติดกับดักในอาคารที่ถูกควบคุมโดยเจ้าพ่อมาเฟียผู้โหดเหี้ยมและกองทัพนักฆ่าและอันธพาลของเขา",
   },
   {
     id: 8,
@@ -103,8 +96,7 @@ const db: Media[] = [
     genres: ["Action", "Sci-fi"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=CRRlbK5w8AE",
-    description:
-      "A cyborg is sent back in time to protect young John Connor from the T-1000, a more advanced and powerful cyborg assassin.",
+    description: "ไซบอร์กถูกส่งกลับไปในอดีตเพื่อปกป้องจอห์น คอนเนอร์วัยเด็กจาก T-1000 ไซบอร์กนักฆ่าที่ทันสมัยและทรงพลังกว่า",
   },
   {
     id: 9,
@@ -116,8 +108,7 @@ const db: Media[] = [
     genres: ["Action", "Sci-fi"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=EXeTwQWrcwY",
-    description:
-      "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague Gotham City.",
+    description: "แบทแมนเพิ่มความเสี่ยงในสงครามต่ออาชญากรรมของเขา ด้วยความช่วยเหลือจากผู้หมวด จิม กอร์ดอนและอัยการเขต ฮาร์วีย์ เดนท์ แบทแมนออกปฏิบัติการเพื่อทำลายองค์กรอาชญากรรมที่เหลืออยู่ซึ่งคุกคามเมืองก็อตแธม",
   },
   {
     id: 10,
@@ -129,8 +120,7 @@ const db: Media[] = [
     genres: ["Action", "Sci-fi"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=vKQi3bBA1y8",
-    description:
-      "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
+    description: "เมื่อหญิงสาวสวยลึกลับนำแฮกเกอร์คอมพิวเตอร์นีโอไปสู่โลกใต้ดินที่น่ากลัว เขาค้นพบความจริงที่น่าตกใจ--ชีวิตที่เขารู้จักคือการหลอกลวงอันซับซ้อนของปัญญาประดิษฐ์ที่ชั่วร้าย",
   },
   {
     id: 11,
@@ -142,8 +132,7 @@ const db: Media[] = [
     genres: ["Action", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=giXco2jaZ_4",
-    description:
-      'After more than thirty years of service as one of the Navy\'s top aviators, Pete "Maverick" Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.',
+    description: 'หลังจากรับใช้มานานกว่าสามสิบปีในฐานะหนึ่งในนักบินชั้นนำของกองทัพเรือ พีท "แมฟเวอริก" มิตเชลล์อยู่ในที่ที่เขาควรจะอยู่ คือการผลักดันขีดจำกัดในฐานะนักบินทดสอบผู้กล้าหาญและหลีกเลี่ยงการเลื่อนยศที่จะทำให้เขาต้องลงจากเครื่องบิน',
   },
   {
     id: 12,
@@ -155,8 +144,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=07pPmCfKi3U",
-    description:
-      "A spoof comedy about a commercial airplane whose crew and passengers fall ill from food poisoning, leaving an ex-pilot with trauma to land the plane safely with hilarious consequences.",
+    description: "ภาพยนตร์ตลกล้อเลียนเกี่ยวกับเครื่องบินพาณิชย์ที่ลูกเรือและผู้โดยสารล้มป่วยจากอาหารเป็นพิษ ทำให้นักบินเก่าที่มีบาดแผลทางใจต้องนำเครื่องบินลงจอดอย่างปลอดภัยท่ามกลางเหตุการณ์ตลกขบขัน",
   },
   {
     id: 13,
@@ -168,8 +156,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=FNppLrmdyug",
-    description:
-      "A woman experiences a series of misfortunes after being asked to serve as maid of honor for her best friend, leading to hilarious and heartfelt moments about friendship.",
+    description: "ผู้หญิงคนหนึ่งประสบกับเหตุการณ์โชคร้ายมากมายหลังจากถูกขอให้เป็นเพื่อนเจ้าสาวให้กับเพื่อนสนิทของเธอ นำไปสู่ช่วงเวลาที่ตลกขบขันและอบอุ่นใจเกี่ยวกับมิตรภาพ",
   },
   {
     id: 14,
@@ -181,8 +168,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=1gXY3kuDvSU",
-    description:
-      "A satirical black comedy about an insane general who orders a nuclear strike on the Soviet Union, and the frantic efforts to stop a global catastrophe.",
+    description: "ภาพยนตร์ตลกชาวสีดำที่เสียดสีเกี่ยวกับนายพลบ้าที่สั่งโจมตีนิวเคลียร์ต่อสหภาพโซเวียต และความพยายามอย่างเร่งด่วนในการหยุดยั้งหายนะระดับโลก",
   },
   {
     id: 15,
@@ -194,8 +180,7 @@ const db: Media[] = [
     genres: ["Comedy", "Fantasy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=tSVeDx9fk60",
-    description:
-      "A cynical TV weatherman finds himself reliving the same day over and over again while covering Groundhog Day festivities in a small Pennsylvania town.",
+    description: "พยากรณ์อากาศทางทีวีผู้หยิ่งยโสพบว่าตัวเองต้องใช้ชีวิตซ้ำในวันเดียวกันซ้ำแล้วซ้ำเล่าขณะที่ไปรายงานข่าวงานฉลองวันกราวด์ฮ็อกในเมืองเล็กๆ ในเพนซิลเวเนีย",
   },
   {
     id: 16,
@@ -207,8 +192,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=V6UlK_pGjxc",
-    description:
-      "A failed hockey player discovers an extraordinary golf talent and enters a PGA tournament to save his grandmother's house, bringing chaos to the professional golf world.",
+    description: "นักฮอกกี้ที่ล้มเหลวค้นพบพรสวรรค์ในการตีกอล์ฟที่พิเศษและเข้าร่วมการแข่งขัน PGA เพื่อช่วยบ้านของคุณยายของเขา นำความวุ่นวายเข้าสู่โลกกอล์ฟมืออาชีพ",
   },
   {
     id: 17,
@@ -220,8 +204,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=urRkGvhXc8w",
-    description:
-      "King Arthur and his Knights of the Round Table embark on a surreal, low-budget search for the Holy Grail, encountering many silly obstacles along the way.",
+    description: "พระเจ้าอาร์เธอร์และอัศวินโต๊ะกลมของเขาออกเดินทางค้นหาจอกศักดิ์สิทธิ์อย่างเหนือจริงและงบประมาณต่ำ พบกับอุปสรรคที่ตลกขบขันมากมายระหว่างทาง",
   },
   {
     id: 18,
@@ -233,8 +216,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=_IwzZYRejZQ",
-    description:
-      "Three company workers who hate their jobs decide to rebel against their greedy boss in this satirical comedy about corporate America.",
+    description: "พนักงานบริษัทสามคนที่เกลียดงานของพวกเขาตัดสินใจกบฏต่อหัวหน้าที่โลภในภาพยนตร์ตลกเสียดสีเกี่ยวกับธุรกิจองค์กรในอเมริกา",
   },
   {
     id: 19,
@@ -246,8 +228,7 @@ const db: Media[] = [
     genres: ["Comedy", "Horror"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=LIfcaZ4pC-4",
-    description:
-      "A man decides to turn his moribund life around by winning back his ex-girlfriend, reconciling with his mother, and dealing with an entire community that has returned from the dead to eat the living.",
+    description: "ผู้ชายคนหนึ่งตัดสินใจเปลี่ยนแปลงชีวิตที่หมดไฟของเขาโดยการคืนดีกับแฟนเก่า ประนีประนอมกับแม่ของเขา และรับมือกับชุมชนทั้งหมดที่กลับมาจากความตายเพื่อกินคนเป็น",
   },
   {
     id: 20,
@@ -259,8 +240,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=cd-go0oBF4Y",
-    description:
-      'Jeff "The Dude" Lebowski, a Los Angeles slacker who only wants to bowl and drink White Russians, is mistaken for a millionaire and finds himself dragged into a strange series of events.',
+    description: 'เจฟฟ์ "เดอะ ดู้ด" เลบาวสกี้ คนเกียจคร้านในลอสแองเจลิสที่อยากแค่เล่นโบว์ลิ่งและดื่มไวท์รัสเชี่ยน ถูกเข้าใจผิดว่าเป็นเศรษฐีเงินล้านและถูกลากเข้าไปในเหตุการณ์แปลกๆ มากมาย',
   },
   {
     id: 21,
@@ -272,8 +252,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=wn-MlISDsNs",
-    description:
-      "Incompetent police detective Frank Drebin must foil an attempt to assassinate Queen Elizabeth II.",
+    description: "นักสืบตำรวจที่ไร้ความสามารถ แฟรงก์ เดรบิน ต้องขัดขวางความพยายามลอบสังหารสมเด็จพระราชินีนาถเอลิซาเบธที่ 2",
   },
   {
     id: 22,
@@ -285,8 +264,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=yDJIcYE32v0",
-    description:
-      "A poor yet passionate young man falls in love with a rich young woman, giving her a sense of freedom, but they are soon separated by their social differences.",
+    description: "ชายหนุ่มที่ยากจนแต่เปี่ยมด้วยความรักตกหลุมรักหญิงสาวที่ร่ำรวย ทำให้เธอได้รับความรู้สึกเสรีภาพ แต่ไม่นานพวกเขาก็ถูกแยกจากกันด้วยความแตกต่างทางสังคม",
   },
   {
     id: 23,
@@ -298,8 +276,7 @@ const db: Media[] = [
     genres: ["Comedy", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=V8OJJSs1po4",
-    description:
-      "Harry and Sally have known each other for years, and are very good friends, but they fear sex would ruin the friendship. The film explores whether men and women can ever just be friends.",
+    description: "แฮร์รี่และแซลลี่รู้จักกันมาหลายปีและเป็นเพื่อนที่ดีมาก แต่พวกเขากลัวว่าเซ็กส์จะทำลายมิตรภาพ ภาพยนตร์สำรวจว่าผู้ชายและผู้หญิงสามารถเป็นเพื่อนกันได้จริงหรือไม่",
   },
   {
     id: 24,
@@ -311,8 +288,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=TEN-2uTi2c0",
-    description:
-      "คณะลูกขุน 12 คนในห้องพิจารณาคดีฆาตกรรม โดยมีลูกขุนเพียงคนเดียวที่พยายามโน้มน้าวคนอื่นๆ ว่าคดีนี้อาจไม่ชัดเจนอย่างที่เห็นในศาล",
+    description: "คณะลูกขุน 12 คนในห้องพิจารณาคดีฆาตกรรม โดยมีลูกขุนเพียงคนเดียวที่พยายามโน้มน้าวคนอื่นๆ ว่าคดีนี้อาจไม่ชัดเจนอย่างที่เห็นในศาล",
   },
   {
     id: 25,
@@ -324,8 +300,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=c3z4PFjbf64",
-    description:
-      'หลังจากการเสียชีวิตของเจ้าพ่อสื่อสิ่งพิมพ์ ชาร์ลส์ ฟอสเตอร์ เคน กลุ่มนักข่าวพยายามถอดรหัสความหมายของคำพูดสุดท้ายของเขาที่ว่า "Rosebud"',
+    description: 'หลังจากการเสียชีวิตของเจ้าพ่อสื่อสิ่งพิมพ์ ชาร์ลส์ ฟอสเตอร์ เคน กลุ่มนักข่าวพยายามถอดรหัสความหมายของคำพูดสุดท้ายของเขาที่ว่า "Rosebud"',
   },
   {
     id: 26,
@@ -337,8 +312,7 @@ const db: Media[] = [
     genres: ["Drama", "Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=y-5eD41-d8Y",
-    description:
-      "ในวันที่ร้อนที่สุดของปี ความตึงเครียดทางเชื้อชาติปะทุขึ้นในย่านบรุกลิน ระหว่างผู้อยู่อาศัยชาวแอฟริกัน-อเมริกัน และเจ้าของร้านพิซซ่าชาวอิตาลี-อเมริกัน",
+    description: "ในวันที่ร้อนที่สุดของปี ความตึงเครียดทางเชื้อชาติปะทุขึ้นในย่านบรุกลิน ระหว่างผู้อยู่อาศัยชาวแอฟริกัน-อเมริกัน และเจ้าของร้านพิซซ่าชาวอิตาลี-อเมริกัน",
   },
   {
     id: 27,
@@ -350,8 +324,7 @@ const db: Media[] = [
     genres: ["Drama", "Fantasy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=6_m6FXJtIOM",
-    description:
-      "ทูตสวรรค์ถูกส่งลงมาจากสวรรค์เพื่อช่วยนักธุรกิจชายผู้สิ้นหวัง โดยแสดงให้เขาเห็นว่าชีวิตจะเป็นอย่างไรถ้าหากเขาไม่เคยเกิดขึ้นมา",
+    description: "ทูตสวรรค์ถูกส่งลงมาจากสวรรค์เพื่อช่วยนักธุรกิจชายผู้สิ้นหวัง โดยแสดงให้เขาเห็นว่าชีวิตจะเป็นอย่างไรถ้าหากเขาไม่เคยเกิดขึ้นมา",
   },
   {
     id: 28,
@@ -363,8 +336,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=t-P8Pl-tXwE",
-    description:
-      "ภาพเหมือนชีวิตของ ยูคิโอะ มิชิมะ นักเขียนชาวญี่ปุ่นผู้โด่งดัง โดยผสมผสานเรื่องราวจากชีวิตจริงเข้ากับการตีความจากนวนิยายของเขา",
+    description: "ภาพเหมือนชีวิตของ ยูคิโอะ มิชิมะ นักเขียนชาวญี่ปุ่นผู้โด่งดัง โดยผสมผสานเรื่องราวจากชีวิตจริงเข้ากับการตีความจากนวนิยายของเขา",
   },
   {
     id: 29,
@@ -375,9 +347,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Comedy", "Drama"],
     nationality: "Korean",
-    trailerUrl: "https://www.youtube.com/watch?v=cKzVk-eWfM4",
-    description:
-      "ครอบครัวฐานะยากจนแทรกซึมเข้าไปในชีวิตของครอบครัวที่ร่ำรวย โดยปลอมตัวเป็นบุคคลผู้มีความสามารถสูงที่ไม่เกี่ยวข้องกัน นำไปสู่เหตุการณ์ที่คาดไม่ถึง",
+    trailerUrl: "https://www.youtube.com/watch?v=5xH0HfJHsaY",
+    description: "ครอบครัวฐานะยากจนแทรกซึมเข้าไปในชีวิตของครอบครัวที่ร่ำรวย โดยปลอมตัวเป็นบุคคลผู้มีความสามารถสูงที่ไม่เกี่ยวข้องกัน นำไปสู่เหตุการณ์ที่คาดไม่ถึง",
   },
   {
     id: 30,
@@ -389,8 +360,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "Sweden",
     trailerUrl: "https://www.youtube.com/watch?v=k_q-w-3-S4E",
-    description:
-      "ตลอดระยะเวลา 10 ปี ภาพยนตร์สำรวจการแตกสลายของชีวิตสมรสระหว่าง มารีอานน์ ทนายความด้านการหย่าร้าง และ โยฮัน อาจารย์มหาวิทยาลัย",
+    description: "ตลอดระยะเวลา 10 ปี ภาพยนตร์สำรวจการแตกสลายของชีวิตสมรสระหว่าง มารีอานน์ ทนายความด้านการหย่าร้าง และ โยฮัน อาจารย์มหาวิทยาลัย",
   },
   {
     id: 31,
@@ -402,8 +372,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=ognsxOvkg-M",
-    description:
-      "ทหารผ่านศึกสามคนกลับบ้านเกิดในอเมริกากลางหลังสงครามโลกครั้งที่ 2 และพบว่าพวกเขาและครอบครัวได้เปลี่ยนแปลงไปอย่างไม่อาจแก้ไขได้",
+    description: "ทหารผ่านศึกสามคนกลับบ้านเกิดในอเมริกากลางหลังสงครามโลกครั้งที่ 2 และพบว่าพวกเขาและครอบครัวได้เปลี่ยนแปลงไปอย่างไม่อาจแก้ไขได้",
   },
   {
     id: 32,
@@ -414,9 +383,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Drama"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=5pJ7W4MksY0",
-    description:
-      "เจ้าพ่อมาเฟียผู้สูงวัยแห่งตระกูลอาชญากรรม ตัดสินใจโอนการควบคุมอาณาจักรลับของเขาให้กับลูกชายคนเล็กที่ไม่เต็มใจรับ",
+    trailerUrl: "https://www.youtube.com/watch?v=UaVTIH8mujA",
+    description: "เจ้าพ่อมาเฟียผู้สูงวัยแห่งตระกูลอาชญากรรม ตัดสินใจโอนการควบคุมอาณาจักรลับของเขาให้กับลูกชายคนเล็กที่ไม่เต็มใจรับ",
   },
   {
     id: 33,
@@ -428,8 +396,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=PLl99DlL6b4",
-    description:
-      "ชายสองคนที่ถูกจองจำได้ผูกมิตรกันเป็นเวลาหลายปี พวกเขาค้นพบการปลอบโยนและการไถ่บาปในที่สุดผ่านการกระทำที่มีคุณธรรม",
+    description: "ชายสองคนที่ถูกจองจำได้ผูกมิตรกันเป็นเวลาหลายปี พวกเขาค้นพบการปลอบโยนและการไถ่บาปในที่สุดผ่านการกระทำที่มีคุณธรรม",
   },
   {
     id: 34,
@@ -441,8 +408,7 @@ const db: Media[] = [
     genres: ["Comedy", "Horror"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=2-2nYI-v4nw",
-    description:
-      "นายอำเภอ, ทหารหนีทัพ และนักรบอินเดียนแดง ต้องร่วมมือกันต่อสู้กับคำสาปซอมบี้ที่แพร่กระจายไปทั่วดินแดนตะวันตก",
+    description: "นายอำเภอ, ทหารหนีทัพ และนักรบอินเดียนแดง ต้องร่วมมือกันต่อสู้กับคำสาปซอมบี้ที่แพร่กระจายไปทั่วดินแดนตะวันตก",
   },
   {
     id: 35,
@@ -453,9 +419,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Drama"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=OT1piRcseZ4",
-    description:
-      "มือกลองแจ๊สหนุ่มผู้ทะเยอทะยาน ถูกผลักดันจนถึงขีดสุดโดยครูผู้สอนจอมโหดของเขาในโรงเรียนดนตรีชื่อดัง",
+    trailerUrl: "https://www.youtube.com/watch?v=7d_jQycdQGo",
+    description: "มือกลองแจ๊สหนุ่มผู้ทะเยอทะยาน ถูกผลักดันจนถึงขีดสุดโดยครูผู้สอนจอมโหดของเขาในโรงเรียนดนตรีชื่อดัง",
   },
   {
     id: 36,
@@ -466,9 +431,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Horror", "Sci-fi"],
     nationality: "UK",
-    trailerUrl: "https://www.youtube.com/watch?v=7suz9ndPBHg",
-    description:
-      "สี่สัปดาห์หลังจากไวรัสลึกลับที่รักษาไม่หายได้แพร่กระจายไปทั่วสหราชอาณาจักร ผู้รอดชีวิตกลุ่มหนึ่งพยายามค้นหาที่หลบภัย",
+    trailerUrl: "https://www.youtube.com/watch?v=c7ynwAgQlDQ",
+    description: "สี่สัปดาห์หลังจากไวรัสลึกลับที่รักษาไม่หายได้แพร่กระจายไปทั่วสหราชอาณาจักร ผู้รอดชีวิตกลุ่มหนึ่งพยายามค้นหาที่หลบภัย",
   },
   {
     id: 37,
@@ -480,8 +444,7 @@ const db: Media[] = [
     genres: ["Horror", "Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=6lM2-o-n2Zo",
-    description:
-      "แอช วิลเลียมส์ ไปพักผ่อนกับแฟนสาวที่กระท่อมอันห่างไกล ที่นั่นเขาได้พบกับเทปเสียงที่ปลดปล่อยปีศาจจำนวนมากซึ่งเข้าสิงและทรมานเขา",
+    description: "แอช วิลเลียมส์ ไปพักผ่อนกับแฟนสาวที่กระท่อมอันห่างไกล ที่นั่นเขาได้พบกับเทปเสียงที่ปลดปล่อยปีศาจจำนวนมากซึ่งเข้าสิงและทรมานเขา",
   },
   {
     id: 38,
@@ -492,9 +455,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Horror"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=sRfnevzM9kQ",
-    description:
-      "ชายหนุ่มชาวแอฟริกัน-อเมริกันไปเยี่ยมพ่อแม่ของแฟนสาวผิวขาวในช่วงสุดสัปดาห์ ซึ่งความไม่สบายใจที่คุกรุ่นอยู่ของเขาได้เดือดถึงจุดแตกหักในที่สุด",
+    trailerUrl: "https://www.youtube.com/watch?v=DzfpyUB60YY",
+    description: "ชายหนุ่มชาวแอฟริกัน-อเมริกันไปเยี่ยมพ่อแม่ของแฟนสาวผิวขาวในช่วงสุดสัปดาห์ ซึ่งความไม่สบายใจที่คุกรุ่นอยู่ของเขาได้เดือดถึงจุดแตกหักในที่สุด",
   },
   {
     id: 39,
@@ -506,8 +468,7 @@ const db: Media[] = [
     genres: ["Horror"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=NT0loXUv-ks",
-    description:
-      "สิบห้าปีหลังจากฆ่าน้องสาวของเขาในคืนฮาโลวีน 1963 ไมเคิล ไมเยอรส์ ได้หลบหนีจากโรงพยาบาลจิตเวชและกลับไปยังเมืองแฮดดอนฟิลด์เพื่อฆ่าอีกครั้ง",
+    description: "สิบห้าปีหลังจากฆ่าน้องสาวของเขาในคืนฮาโลวีน 1963 ไมเคิล ไมเยอรส์ ได้หลบหนีจากโรงพยาบาลจิตเวชและกลับไปยังเมืองแฮดดอนฟิลด์เพื่อฆ่าอีกครั้ง",
   },
   {
     id: 40,
@@ -518,9 +479,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Horror"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=sSkGLVwMRLU",
-    description:
-      "นายอำเภอท้องถิ่น, นักชีววิทยาทางทะเล และกะลาสีเรือชรา ร่วมมือกันล่าฉลามขาวขนาดมหึมาที่กำลังคุกคามเมืองตากอากาศชายหาด",
+    trailerUrl: "https://www.youtube.com/watch?v=U1fu_sA7XhE",
+    description: "นายอำเภอท้องถิ่น, นักชีววิทยาทางทะเล และกะลาสีเรือชรา ร่วมมือกันล่าฉลามขาวขนาดมหึมาที่กำลังคุกคามเมืองตากอากาศชายหาด",
   },
   {
     id: 41,
@@ -532,8 +492,7 @@ const db: Media[] = [
     genres: ["Horror", "Drama"],
     nationality: "Sweden",
     trailerUrl: "https://www.youtube.com/watch?v=ICp4g9p_rgo",
-    description:
-      "เด็กชายวัย 12 ปีที่ถูกรังแก ได้พัฒนาความสัมพันธ์กับเด็กแปลกหน้าในแถบชานเมืองสตอกโฮล์ม ซึ่งเขาได้ค้นพบในเวลาต่อมาว่าเป็นแวมไพร์",
+    description: "เด็กชายวัย 12 ปีที่ถูกรังแก ได้พัฒนาความสัมพันธ์กับเด็กแปลกหน้าในแถบชานเมืองสตอกโฮล์ม ซึ่งเขาได้ค้นพบในเวลาต่อมาว่าเป็นแวมไพร์",
   },
   {
     id: 42,
@@ -544,9 +503,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Horror"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=IOKEWy5uJOE",
-    description:
-      "เลขานุการสาวขโมยเงิน 40,000 ดอลลาร์ แล้วหลบหนีไปเข้าพักที่โมเต็ลห่างไกล ซึ่งดำเนินการโดยชายหนุ่มภายใต้การครอบงำของแม่เขา",
+    trailerUrl: "https://www.youtube.com/watch?v=Wz719b9QUqY",
+    description: "เลขานุการสาวขโมยเงิน 40,000 ดอลลาร์ แล้วหลบหนีไปเข้าพักที่โมเต็ลห่างไกล ซึ่งดำเนินการโดยชายหนุ่มภายใต้การครอบงำของแม่เขา",
   },
   {
     id: 43,
@@ -558,8 +516,7 @@ const db: Media[] = [
     genres: ["Horror", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=g_u1-b0i-G0",
-    description:
-      "หญิงสาวที่เพิ่งแต่งงานใหม่ในแมนฮัตตันตั้งครรภ์ แต่ไม่นานก็เริ่มสงสัยว่าเพื่อนบ้านที่แปลกประหลาดของเธอมีเจตนาชั่วร้ายต่อลูกในท้องของเธอ",
+    description: "หญิงสาวที่เพิ่งแต่งงานใหม่ในแมนฮัตตันตั้งครรภ์ แต่ไม่นานก็เริ่มสงสัยว่าเพื่อนบ้านที่แปลกประหลาดของเธอมีเจตนาชั่วร้ายต่อลูกในท้องของเธอ",
   },
   {
     id: 44,
@@ -571,8 +528,7 @@ const db: Media[] = [
     genres: ["Horror"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=k10ETZ41q5o",
-    description:
-      "นักสืบสวนเรื่องเหนือธรรมชาติ เอ็ด และ ลอร์เรน วอร์เรน ทำงานเพื่อช่วยเหลือครอบครัวที่ถูกคุกคามโดยพลังมืดในบ้านไร่อันเงียบสงบของพวกเขา",
+    description: "นักสืบสวนเรื่องเหนือธรรมชาติ เอ็ด และ ลอร์เรน วอร์เรน ทำงานเพื่อช่วยเหลือครอบครัวที่ถูกคุกคามโดยพลังมืดในบ้านไร่อันเงียบสงบของพวกเขา",
   },
   {
     id: 45,
@@ -584,8 +540,7 @@ const db: Media[] = [
     genres: ["Horror"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=NIlR4QU4Kq8",
-    description:
-      "เรื่องราวการเข้าสิงของปีศาจในตัวเด็กสาว และความพยายามของแม่ในการช่วยเหลือเธอผ่านการไล่ผีโดยบาทหลวงคาทอลิกสองคน",
+    description: "เรื่องราวการเข้าสิงของปีศาจในตัวเด็กสาว และความพยายามของแม่ในการช่วยเหลือเธอผ่านการไล่ผีโดยบาทหลวงคาทอลิกสองคน",
   },
   {
     id: 46,
@@ -596,9 +551,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Horror", "Drama"],
     nationality: "UK",
-    trailerUrl: "https://www.youtube.com/watch?v=FZQvIJxG9Xs",
-    description:
-      "นักเขียนที่กำลังฟื้นตัวจากอาการติดสุรา รับงานเป็นผู้ดูแลโรงแรมอันห่างไกลในช่วงฤดูหนาว ที่ซึ่งพลังชั่วร้ายที่สะสมอยู่ทำให้เขากลายเป็นบ้า",
+    trailerUrl: "https://www.youtube.com/watch?v=5Cb3ik6zP2I",
+    description: "นักเขียนที่กำลังฟื้นตัวจากอาการติดสุรา รับงานเป็นผู้ดูแลโรงแรมอันห่างไกลในช่วงฤดูหนาว ที่ซึ่งพลังชั่วร้ายที่สะสมอยู่ทำให้เขากลายเป็นบ้า",
   },
   {
     id: 47,
@@ -609,12 +563,11 @@ const db: Media[] = [
     type: "movie",
     genres: ["Horror", "Sci-fi"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=24gOJUbTGpM",
-    description:
-      "กลุ่มนักวิจัยชาวอเมริกันในแอนตาร์กติกาพบกับสิ่งมีชีวิตต่างดาวปรสิตที่ดูดกลืมและเลียนแบบสิ่งมีชีวิตอื่น",
+    trailerUrl: "https://www.youtube.com/watch?v=5ftmr17M-a4",
+    description: "กลุ่มนักวิจัยชาวอเมริกันในแอนตาร์กติกาพบกับสิ่งมีชีวิตต่างดาวปรสิตที่ดูดกลืมและเลียนแบบสิ่งมีชีวิตอื่น",
   },
 
-  // === Sci-fi ===
+  // === Sci-fi (id 48-59) ===
   {
     id: 48,
     imageUrl: "/poster/moive/Sci-Fi/a-space-odyssey.jpg",
@@ -624,9 +577,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=kR2r-A9H3Kg",
-    description:
-      "หลังจากพบเสาหินลึกลับบนดวงจันทร์ มนุษยชาติได้ส่งการเดินทางไปยังดาวพฤหัสบดี โดยมีนักบินอวกาศและซูเปอร์คอมพิวเตอร์อัจฉริยะ HAL 9000",
+    trailerUrl: "https://www.youtube.com/watch?v=oR_e9y-bka0",
+    description: "หลังจากพบเสาหินลึกลับบนดวงจันทร์ มนุษยชาติได้ส่งการเดินทางไปยังดาวพฤหัสบดี โดยมีนักบินอวกาศและซูเปอร์คอมพิวเตอร์อัจฉริยะ HAL 9000",
   },
   {
     id: 49,
@@ -637,9 +589,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi", "Action", "Horror"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=p9sE1fIyIlg",
-    description:
-      "เอลเลน ริปลีย์ ผู้รอดชีวิตเพียงคนเดียวจากการโจมตีของเอเลี่ยน ตกลงที่จะกลับไปยังอาณานิคมบน LV-426 พร้อมกับหน่วยนาวิกโยธินเพื่อสืบสวนการขาดการติดต่อ",
+    trailerUrl: "https://www.youtube.com/watch?v=XeO3jMZphhs",
+    description: "เอลเลน ริปลีย์ ผู้รอดชีวิตเพียงคนเดียวจากการโจมตีของเอเลี่ยน ตกลงที่จะกลับไปยังอาณานิคมบน LV-426 พร้อมกับหน่วยนาวิกโยธินเพื่อสืบสวนการขาดการติดต่อ",
   },
   {
     id: 50,
@@ -650,9 +601,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi", "Horror"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=jQ5lPt9edzQ",
-    description:
-      "ลูกเรือของยานอวกาศเชิงพาณิชย์ Nostromo ถูกโจมตีโดยสิ่งมีชีวิตต่างดาวที่ก้าวร้าวอย่างมาก หลังจากตอบสนองต่อสัญญาณเตือนจากดาวเคราะห์ที่ไม่รู้จัก",
+    trailerUrl: "https://www.youtube.com/watch?v=LjLamj-b0I8",
+    description: "ลูกเรือของยานอวกาศเชิงพาณิชย์ Nostromo ถูกโจมตีโดยสิ่งมีชีวิตต่างดาวที่ก้าวร้าวอย่างมาก หลังจากตอบสนองต่อสัญญาณเตือนจากดาวเคราะห์ที่ไม่รู้จัก",
   },
   {
     id: 51,
@@ -663,9 +613,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi", "Drama"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=7W1m5ER3I1Y",
-    description:
-      "นักภาษาศาสตร์ถูกเกณฑ์โดยกองทัพสหรัฐฯ เพื่อค้นหาวิธีสื่อสารกับมนุษย์ต่างดาวที่มาถึงโลก ก่อนที่ความตึงเครียดจะนำไปสู่สงคราม",
+    trailerUrl: "https://www.youtube.com/watch?v=tFMo3UJ4B4g",
+    description: "นักภาษาศาสตร์ถูกเกณฑ์โดยกองทัพสหรัฐฯ เพื่อค้นหาวิธีสื่อสารกับมนุษย์ต่างดาวที่มาถึงโลก ก่อนที่ความตึงเครียดจะนำไปสู่สงคราม",
   },
   {
     id: 52,
@@ -677,8 +626,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=qvsgGtMTRBI",
-    description:
-      "วัยรุ่นคนหนึ่งถูกส่งย้อนเวลากลับไปยังปี 1955 โดยบังเอิญด้วยรถ DeLorean ที่เดินทางข้ามเวลา ที่นั่นเขาขัดขวางการพบกันครั้งแรกของพ่อแม่ในอนาคตของเขา",
+    description: "วัยรุ่นคนหนึ่งถูกส่งย้อนเวลากลับไปยังปี 1955 โดยบังเอิญด้วยรถ DeLorean ที่เดินทางข้ามเวลา ที่นั่นเขาขัดขวางการพบกันครั้งแรกของพ่อแม่ในอนาคตของเขา",
   },
   {
     id: 53,
@@ -689,9 +637,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi", "Action"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=aNtwqloTvbc",
-    description:
-      'ในอนาคตดิสโทเปียของลอสแอนเจลิส "เบลดรันเนอร์" ต้องไล่ล่าและ "ปลดระวาง" มนุษย์เทียม (replicants) สี่คนที่ขโมยยานและกลับมายังโลก',
+    trailerUrl: "https://www.youtube.com/watch?v=eogpIG53Cis",
+    description: 'ในอนาคตดิสโทเปียของลอสแอนเจลิส "เบลดรันเนอร์" ต้องไล่ล่าและ "ปลดระวาง" มนุษย์เทียม (replicants) สี่คนที่ขโมยยานและกลับมายังโลก',
   },
   {
     id: 54,
@@ -703,8 +650,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=hWjlUj7Czlk",
-    description:
-      'ชายผู้มีพันธุกรรมด้อยกว่า ("In-Valid") สวมรอยเป็นบุคคลผู้มีพันธุกรรมที่เหนือกว่า เพื่อเอาชนะการเลือกปฏิบัติทางพันธุกรรมและไล่ตามความฝันในการเดินทางไปอวกาศ',
+    description: 'ชายผู้มีพันธุกรรมด้อยกว่า ("In-Valid") สวมรอยเป็นบุคคลผู้มีพันธุกรรมที่เหนือกว่า เพื่อเอาชนะการเลือกปฏิบัติทางพันธุกรรมและไล่ตามความฝันในการเดินทางไปอวกาศ',
   },
   {
     id: 55,
@@ -715,9 +661,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi", "Action"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=LifqWf0BAOA",
-    description:
-      "หัวขโมยผู้เชี่ยวชาญในการขโมยข้อมูลโดยการแทรกซึมเข้าไปในจิตใต้สำนึก ได้รับข้อเสนอให้ลบประวัติอาชญากรรมของเขาเพื่อแลกกับการปลูกฝังความคิดเข้าไปในจิตใต้สำนึกของเป้าหมาย",
+    trailerUrl: "https://www.youtube.com/watch?v=YoHD9XEInc0",
+    description: "หัวขโมยผู้เชี่ยวชาญในการขโมยข้อมูลโดยการแทรกซึมเข้าไปในจิตใต้สำนึก ได้รับข้อเสนอให้ลบประวัติอาชญากรรมของเขาเพื่อแลกกับการปลูกฝังความคิดเข้าไปในจิตใต้สำนึกของเป้าหมาย",
   },
   {
     id: 56,
@@ -728,9 +673,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi", "Drama"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=8ZCsQfWPZPo",
-    description:
-      "ในอนาคตดิสโทเปียที่โลกกำลังประสบภัยพิบัติทางธรรมชาติ นักบินอวกาศกลุ่มหนึ่งเดินทางผ่านรูหนอนที่เพิ่งค้นพบเพื่อค้นหาบ้านใหม่สำหรับมนุษยชาติ",
+    trailerUrl: "https://www.youtube.com/watch?v=zSWdZVtXT7E",
+    description: "ในอนาคตดิสโทเปียที่โลกกำลังประสบภัยพิบัติทางธรรมชาติ นักบินอวกาศกลุ่มหนึ่งเดินทางผ่านรูหนอนที่เพิ่งค้นพบเพื่อค้นหาบ้านใหม่สำหรับมนุษยชาติ",
   },
   {
     id: 57,
@@ -741,9 +685,8 @@ const db: Media[] = [
     type: "movie",
     genres: ["Sci-fi", "Action"],
     nationality: "USA",
-    trailerUrl: "https://www.youtube.com/watch?v=KxE9uizW4o0",
-    description:
-      "นักบรรพชีวินวิทยาที่ไปเยี่ยมชมสวนสนุกที่เกือบสมบูรณ์แบบซึ่งเต็มไปด้วยไดโนเสาร์โคลนนิ่ง ต้องปกป้องเด็กสองคนหลังจากระบบไฟฟ้าล่มและไดโนเสาร์หลุดออกมา",
+    trailerUrl: "https://www.youtube.com/watch?v=lc0UehYemQA",
+    description: "นักบรรพชีวินวิทยาที่ไปเยี่ยมชมสวนสนุกที่เกือบสมบูรณ์แบบซึ่งเต็มไปด้วยไดโนเสาร์โคลนนิ่ง ต้องปกป้องเด็กสองคนหลังจากระบบไฟฟ้าล่มและไดโนเสาร์หลุดออกมา",
   },
   {
     id: 58,
@@ -755,8 +698,7 @@ const db: Media[] = [
     genres: ["Action"],
     nationality: "Germany",
     trailerUrl: "https://www.youtube.com/watch?v=ZCYnsUdO6H0",
-    description:
-      "หญิงสาวคนหนึ่งต้องหาเงิน 100,000 มาร์กให้ได้ภายใน 20 นาที เพื่อช่วยชีวิตแฟนหนุ่มของเธอที่ทำเงินของหัวหน้าแก๊งหายไป",
+    description: "หญิงสาวคนหนึ่งต้องหาเงิน 100,000 มาร์กให้ได้ภายใน 20 นาที เพื่อช่วยชีวิตแฟนหนุ่มของเธอที่ทำเงินของหัวหน้าแก๊งหายไป",
   },
   {
     id: 59,
@@ -768,10 +710,10 @@ const db: Media[] = [
     genres: ["Sci-fi", "Action", "Fantasy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=JNwNXF9Y6kY",
-    description:
-      "หลังจากที่กองกำลังกบฏถูกโจมตีอย่างหนักบนดาวน้ำแข็งฮอธ ลุค สกายวอล์คเกอร์ ได้ไปฝึกฝนเจไดขั้นสูงกับอาจารย์โยดา ในขณะที่เพื่อนๆ ของเขาถูกดาร์ธ เวเดอร์ ไล่ล่า",
+    description: "หลังจากที่กองกำลังกบฏถูกโจมตีอย่างหนักบนดาวน้ำแข็งฮอธ ลุค สกายวอล์คเกอร์ ได้ไปฝึกฝนเจไดขั้นสูงกับอาจารย์โยดา ในขณะที่เพื่อนๆ ของเขาถูกดาร์ธ เวเดอร์ ไล่ล่า",
   },
 
+  // === Series (id 1000+) ===
   {
     id: 1000,
     imageUrl: "/poster/series/Comedy/Barry.jpg",
@@ -782,8 +724,7 @@ const db: Media[] = [
     genres: ["Comedy", "Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=5VM6juIndEM",
-    description:
-      "นักฆ่าต่างจังหวัดเดินทางมาลอสแองเจลิสเพื่อทำภารกิจ แต่กลับพบความหลงใหลในการแสดงละครและพยายามเปลี่ยนแปลงชีวิตของเขา ขณะที่ยังต้องดิ้นรนกับอดีตที่มืดมน",
+    description: "นักฆ่าต่างจังหวัดเดินทางมาลอสแองเจลิสเพื่อทำภารกิจ แต่กลับพบความหลงใหลในการแสดงละครและพยายามเปลี่ยนแปลงชีวิตของเขา ขณะที่ยังต้องดิ้นรนกับอดีตที่มืดมน",
   },
   {
     id: 1001,
@@ -795,8 +736,7 @@ const db: Media[] = [
     genres: ["Comedy", "Crime Thriller"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=svedkvjD6d8",
-    description:
-      "ชีวิตประจำวันของทีมนักสืบแห่งโรงพักบรู๊คลิน ที่ต้องทำงานร่วมกันแก้คดีต่างๆ ท่ามกลางความสนุกสนาน มิตรภาพ และสถานการณ์ตลกขบขันมากมาย",
+    description: "ชีวิตประจำวันของทีมนักสืบแห่งโรงพักบรู๊คลิน ที่ต้องทำงานร่วมกันแก้คดีต่างๆ ท่ามกลางความสนุกสนาน มิตรภาพ และสถานการณ์ตลกขบขันมากมาย",
   },
   {
     id: 1002,
@@ -808,8 +748,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=RzdPEJbpFuI",
-    description:
-      "กลุ่มนักศึกษาที่แตกต่างกันอย่างสิ้นเชิงมารวมตัวกันในกลุ่มเรียนที่วิทยาลัยชุมชน พวกเขาสร้างมิตรภาพและผจญภัยแสนสนุกผ่านประสบการณ์การเรียนที่ไม่เหมือนใคร",
+    description: "กลุ่มนักศึกษาที่แตกต่างกันอย่างสิ้นเชิงมารวมตัวกันในกลุ่มเรียนที่วิทยาลัยชุมชน พวกเขาสร้างมิตรภาพและผจญภัยแสนสนุกผ่านประสบการณ์การเรียนที่ไม่เหมือนใคร",
   },
   {
     id: 1003,
@@ -821,8 +760,7 @@ const db: Media[] = [
     genres: ["Comedy", "Drama"],
     nationality: "UK",
     trailerUrl: "https://www.youtube.com/watch?v=I5Uv6cb9YRs",
-    description:
-      "ผู้หญิงคนหนึ่งในลอนดอนพยายามรับมือกับชีวิตที่วุ่นวาย ความสัมพันธ์ที่ซับซ้อน และความสูญเสีย ด้วยอารมณ์ขันที่แห้งและการทำลายกำแพงที่สี่อย่างตรงไปตรงมา",
+    description: "ผู้หญิงคนหนึ่งในลอนดอนพยายามรับมือกับชีวิตที่วุ่นวาย ความสัมพันธ์ที่ซับซ้อน และความสูญเสีย ด้วยอารมณ์ขันที่แห้งและการทำลายกำแพงที่สี่อย่างตรงไปตรงมา",
   },
   {
     id: 1004,
@@ -834,8 +772,7 @@ const db: Media[] = [
     genres: ["Comedy", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=IEEbUzffzrk",
-    description:
-      "เรื่องราวของเพื่อนสนิท 6 คนในนิวยอร์ก ที่ใช้ชีวิตผ่านความรัก งาน มิตรภาพ และช่วงเวลาตลกขบขันนับไม่ถ้วนในช่วงอายุ 20-30 ปี",
+    description: "เรื่องราวของเพื่อนสนิท 6 คนในนิวยอร์ก ที่ใช้ชีวิตผ่านความรัก งาน มิตรภาพ และช่วงเวลาตลกขบขันนับไม่ถ้วนในช่วงอายุ 20-30 ปี",
   },
   {
     id: 1005,
@@ -847,8 +784,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=RyE1zc28vmo",
-    description:
-      "เจ้าหน้าที่กองสวนสาธารณะผู้มีใจรักงานบริการ และทีมงานที่แปลกประหลาดของเธอ พยายามปรับปรุงเมืองเล็กๆ ผ่านโครงการต่างๆ ท่ามกลางความตลกขบขัน",
+    description: "เจ้าหน้าที่กองสวนสาธารณะผู้มีใจรักงานบริการ และทีมงานที่แปลกประหลาดของเธอ พยายามปรับปรุงเมืองเล็กๆ ผ่านโครงการต่างๆ ท่ามกลางความตลกขบขัน",
   },
   {
     id: 1006,
@@ -860,8 +796,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "Canada",
     trailerUrl: "https://www.youtube.com/watch?v=W0uWS6CnC2o",
-    description:
-      "ครอบครัวมหาเศรษฐีที่สูญเสียทุกอย่างต้องย้ายไปอาศัยในเมืองเล็กๆ ที่พวกเขาเคยซื้อเป็นของขวัญล้อเล่น และต้องเริ่มต้นชีวิตใหม่ท่ามกลางความแตกต่างทางวัฒนธรรม",
+    description: "ครอบครัวมหาเศรษฐีที่สูญเสียทุกอย่างต้องย้ายไปอาศัยในเมืองเล็กๆ ที่พวกเขาเคยซื้อเป็นของขวัญล้อเล่น และต้องเริ่มต้นชีวิตใหม่ท่ามกลางความแตกต่างทางวัฒนธรรม",
   },
   {
     id: 1007,
@@ -873,8 +808,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=69V__a49xtw",
-    description:
-      "กลุ่มโปรแกรมเมอร์ในหุ่บเขาซิลิคอน พยายามสร้างสตาร์ทอัพให้ประสบความสำเร็จท่ามกลางการแข่งขัน การเมืององค์กร และความท้าทายทางเทคโนโลยี",
+    description: "กลุ่มโปรแกรมเมอร์ในหุ่บเขาซิลิคอน พยายามสร้างสตาร์ทอัพให้ประสบความสำเร็จท่ามกลางการแข่งขัน การเมืององค์กร และความท้าทายทางเทคโนโลยี",
   },
   {
     id: 1008,
@@ -886,8 +820,7 @@ const db: Media[] = [
     genres: ["Comedy", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=3u7EIiohs6U",
-    description:
-      "โค้ชฟุตบอลอเมริกันผู้มองโลกในแง่ดีถูกจ้างให้มาคุมทีมฟุตบอลในอังกฤษ แม้จะไม่มีประสบการณ์ แต่เขานำความเชื่อมั่น ความเมตตา และจิตใจที่ดีงามมาสร้างความเปลี่ยนแปลง",
+    description: "โค้ชฟุตบอลอเมริกันผู้มองโลกในแง่ดีถูกจ้างให้มาคุมทีมฟุตบอลในอังกฤษ แม้จะไม่มีประสบการณ์ แต่เขานำความเชื่อมั่น ความเมตตา และจิตใจที่ดีงามมาสร้างความเปลี่ยนแปลง",
   },
   {
     id: 1009,
@@ -899,8 +832,7 @@ const db: Media[] = [
     genres: ["Comedy", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=gRr8Aa4dCpE",
-    description:
-      "แม่บ้านในยุค 1950s ค้นพบพรสวรรค์ในการเล่นสแตนด์อัพคอเมดี้ และไล่ตามความฝันในการเป็นนักแสดงตลกมืออาชีพท่ามกลางสังคมที่ไม่เอื้ออำนวย",
+    description: "แม่บ้านในยุค 1950s ค้นพบพรสวรรค์ในการเล่นสแตนด์อัพคอเมดี้ และไล่ตามความฝันในการเป็นนักแสดงตลกมืออาชีพท่ามกลางสังคมที่ไม่เอื้ออำนวย",
   },
   {
     id: 1010,
@@ -912,8 +844,7 @@ const db: Media[] = [
     genres: ["Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=LHOtME2DL4g",
-    description:
-      "สารคดีเท็จติดตามชีวิตประจำวันของพนักงานในสำนักงานขายกระดาษแห่งหนึ่ง ภายใต้การจัดการของหัวหน้าที่แปลกประหลาดและสถานการณ์ที่ตลกขบขันไม่รู้จบ",
+    description: "สารคดีเท็จติดตามชีวิตประจำวันของพนักงานในสำนักงานขายกระดาษแห่งหนึ่ง ภายใต้การจัดการของหัวหน้าที่แปลกประหลาดและสถานการณ์ที่ตลกขบขันไม่รู้จบ",
   },
   {
     id: 1011,
@@ -925,11 +856,8 @@ const db: Media[] = [
     genres: ["Comedy", "Horror"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=iMkrZE8OejI",
-    description:
-      "สารคดีเท็จติดตามชีวิตของแวมไพร์สี่ตนที่อาศัยอยู่ร่วมกันในสเตเทนไอส์แลนด์ พวกเขาพยายามปรับตัวเข้ากับโลกสมัยใหม่ท่ามกลางความตลกขบขันและสถานการณ์เหนือธรรมชาติ",
+    description: "สารคดีเท็จติดตามชีวิตของแวมไพร์สี่ตนที่อาศัยอยู่ร่วมกันในสเตเทนไอส์แลนด์ พวกเขาพยายามปรับตัวเข้ากับโลกสมัยใหม่ท่ามกลางความตลกขบขันและสถานการณ์เหนือธรรมชาติ",
   },
-
-  // === Crime Thriller ===
   {
     id: 1012,
     imageUrl: "/poster/series/Crime  Thriller/Better Call Saul.jpg",
@@ -940,8 +868,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=HN4oydykJFc",
-    description:
-      "เรื่องราวก่อนเหตุการณ์ Breaking Bad ที่ติดตามการเปลี่ยนแปลงของทนายความผู้ดิ้นรน จิมมี่ แม็คกิลล์ กลายเป็นซอล กู๊ดแมน ทนายความผู้มีศีลธรรมที่น่าสงสัย",
+    description: "เรื่องราวก่อนเหตุการณ์ Breaking Bad ที่ติดตามการเปลี่ยนแปลงของทนายความผู้ดิ้นรน จิมมี่ แม็คกิลล์ กลายเป็นซอล กู๊ดแมน ทนายความผู้มีศีลธรรมที่น่าสงสัย",
   },
   {
     id: 1013,
@@ -953,8 +880,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=HhesaQXLuRY",
-    description:
-      "ครูสอนเคมีมัธยมที่ได้รับการวินิจฉัยว่าเป็นมะเร็ง ตัดสินใจผลิตและขายเมทแอมเฟตามีนเพื่อสร้างความมั่นคงทางการเงินให้ครอบครัว นำไปสู่การเปลี่ยนแปลงอันน่าสะพรึงกลัว",
+    description: "ครูสอนเคมีมัธยมที่ได้รับการวินิจฉัยว่าเป็นมะเร็ง ตัดสินใจผลิตและขายเมทแอมเฟตามีนเพื่อสร้างความมั่นคงทางการเงินให้ครอบครัว นำไปสู่การเปลี่ยนแปลงอันน่าสะพรึงกลัว",
   },
   {
     id: 1014,
@@ -966,8 +892,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=YQeUmSD1c3g",
-    description:
-      "นักพิสูจน์หลักฐานคดีฆาตกรรมผู้มีชีวิตสองหน้า กลางวันเป็นผู้เชี่ยวชาญด้านรูปแบบคราบเลือด แต่กลางคืนกลายเป็นนักฆ่าต่อเนื่องที่ล่าเหยื่อเฉพาะอาชญากร",
+    description: "นักพิสูจน์หลักฐานคดีฆาตกรรมผู้มีชีวิตสองหน้า กลางวันเป็นผู้เชี่ยวชาญด้านรูปแบบคราบเลือด แต่กลางคืนกลายเป็นนักฆ่าต่อเนื่องที่ล่าเหยื่อเฉพาะอาชญากร",
   },
   {
     id: 1015,
@@ -979,8 +904,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=xZoy4JvBAeI",
-    description:
-      "ซีรีส์แอนโธโลยีที่แต่ละซีซันเล่าเรื่องราวอาชญากรรมที่แตกต่างกันในมิดเวสต์ของอเมริกา ผสมผสานความรุนแรง อารมณ์ขันดำ และตัวละครที่น่าจดจำ",
+    description: "ซีรีส์แอนโธโลยีที่แต่ละซีซันเล่าเรื่องราวอาชญากรรมที่แตกต่างกันในมิดเวสต์ของอเมริกา ผสมผสานความรุนแรง อารมณ์ขันดำ และตัวละครที่น่าจดจำ",
   },
   {
     id: 1016,
@@ -992,8 +916,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=oJx8oTCL_Ow",
-    description:
-      "เจ้าหน้าที่ FBI สองคนขยายขอบเขตของอาชญาวิทยาโดยเจาะลึกจิตวิทยาของฆาตกรต่อเนื่อง ในช่วงปลายทศวรรษ 1970 เพื่อแก้คดีที่ยากลำบาก",
+    description: "เจ้าหน้าที่ FBI สองคนขยายขอบเขตของอาชญาวิทยาโดยเจาะลึกจิตวิทยาของฆาตกรต่อเนื่อง ในช่วงปลายทศวรรษ 1970 เพื่อแก้คดีที่ยากลำบาก",
   },
   {
     id: 1017,
@@ -1005,8 +928,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "Spain",
     trailerUrl: "https://www.youtube.com/watch?v=_InqQJRqGW4",
-    description:
-      "อาชญากรกลุ่มหนึ่งวางแผนปล้นที่หล่อเหรียญแห่งชาติสเปน โดยมีแผนการที่ซับซ้อนและผู้นำที่ชาญฉลาด พวกเขาต้องเผชิญหน้ากับตำรวจและความขัดแย้งภายในทีม",
+    description: "อาชญากรกลุ่มหนึ่งวางแผนปล้นที่หล่อเหรียญแห่งชาติสเปน โดยมีแผนการที่ซับซ้อนและผู้นำที่ชาญฉลาด พวกเขาต้องเผชิญหน้ากับตำรวจและความขัดแย้งภายในทีม",
   },
   {
     id: 1018,
@@ -1018,8 +940,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=U7elNhHwgBU",
-    description:
-      "เรื่องราวการล่าเจ้าพ่อยาเสพติดชื่อดัง ปาโบล เอสโกบาร์ และการต่อสู้ระหว่างเจ้าหน้าที่ DEA กับอาณาจักรค้ายาในโคลอมเบียช่วงทศวรรษ 1980-90",
+    description: "เรื่องราวการล่าเจ้าพ่อยาเสพติดชื่อดัง ปาโบล เอสโกบาร์ และการต่อสู้ระหว่างเจ้าหน้าที่ DEA กับอาณาจักรค้ายาในโคลอมเบียช่วงทศวรรษ 1980-90",
   },
   {
     id: 1019,
@@ -1031,8 +952,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=5hAXVqrljbs",
-    description:
-      "ที่ปรึกษาทางการเงินถูกบังคับให้ย้ายครอบครัวไปยังโอซาร์กและต้องฟอกเงิน 500 ล้านดอลลาร์ให้กับคาร์เทลยาเสพติดเม็กซิโกภายใน 5 ปี เพื่อชดเชยความผิดพลาด",
+    description: "ที่ปรึกษาทางการเงินถูกบังคับให้ย้ายครอบครัวไปยังโอซาร์กและต้องฟอกเงิน 500 ล้านดอลลาร์ให้กับคาร์เทลยาเสพติดเม็กซิโกภายใน 5 ปี เพื่อชดเชยความผิดพลาด",
   },
   {
     id: 1020,
@@ -1044,8 +964,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "UK",
     trailerUrl: "https://www.youtube.com/watch?v=oVzVdvGIC7U",
-    description:
-      "แก๊งอาชญากรในเบอร์มิงแฮม อังกฤษ หลังสงครามโลกครั้งที่ 1 นำโดยทอมมี่ เชลบี้ ผู้มีความทะเยอทะยานจะขยายอิทธิพลและสร้างอาณาจักรอาชญากรรม",
+    description: "แก๊งอาชญากรในเบอร์มิงแฮม อังกฤษ หลังสงครามโลกครั้งที่ 1 นำโดยทอมมี่ เชลบี้ ผู้มีความทะเยอทะยานจะขยายอิทธิพลและสร้างอาณาจักรอาชญากรรม",
   },
   {
     id: 1021,
@@ -1057,8 +976,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "UK",
     trailerUrl: "https://www.youtube.com/watch?v=xK7S9mrFWL4",
-    description:
-      "เชอร์ล็อก โฮล์มส์และจอห์น วัตสัน รุ่นยุคสมัยใหม่ แก้คดีปริศนาต่างๆ ในลอนดอนร่วมสมัย ด้วยการให้เหตุผลแบบนิรนัยและเทคโนโลยีที่ทันสมัย",
+    description: "เชอร์ล็อก โฮล์มส์และจอห์น วัตสัน รุ่นยุคสมัยใหม่ แก้คดีปริศนาต่างๆ ในลอนดอนร่วมสมัย ด้วยการให้เหตุผลแบบนิรนัยและเทคโนโลยีที่ทันสมัย",
   },
   {
     id: 1022,
@@ -1070,8 +988,7 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=GGIJx34VQ3g",
-    description:
-      "ซีรีส์แอนโธโลจีที่ติดตามนักสืบแฮร์รี่ แอมโบรส ขุดคุ้ยหาแรงจูงใจที่ซ่อนเร้นเบื้องหลังอาชญากรรมที่น่าตกใจในแต่ละซีซัน",
+    description: "ซีรีส์แอนโธโลจีที่ติดตามนักสืบแฮร์รี่ แอมโบรส ขุดคุ้ยหาแรงจูงใจที่ซ่อนเร้นเบื้องหลังอาชญากรรมที่น่าตกใจในแต่ละซีซัน",
   },
   {
     id: 1023,
@@ -1083,11 +1000,9 @@ const db: Media[] = [
     genres: ["Crime Thriller", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=TXwCoNwBSkQ",
-    description:
-      "ซีรีส์แอนโธโลจีที่แต่ละซีซันเล่าเรื่องราวการสืบสวนคดีฆาตกรรมที่ซับซ้อน โดยนักสืบที่ต้องเผชิญกับปีศาจภายในตัวเองและความมืดมิดของสังคม",
+    description: "ซีรีส์แอนโธโลจีที่แต่ละซีซันเล่าเรื่องราวการสืบสวนคดีฆาตกรรมที่ซับซ้อน โดยนักสืบที่ต้องเผชิญกับปีศาจภายในตัวเองและความมืดมิดของสังคม",
   },
-
- {
+  {
     id: 1024,
     imageUrl: "/poster/series/Drama/Chernobyl.jpg",
     title: "Chernobyl",
@@ -1097,8 +1012,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=s9APLXM9Ei8",
-    description:
-      "มินิซีรีส์ที่บอกเล่าเรื่องราวความหายนะของโรงไฟฟ้านิวเคลียร์เชอร์โนบิล ในปี 1986 และความกล้าหาญของผู้คนที่เสียสลีเพื่อช่วยยุโรปจากหายนะที่ยิ่งใหญ่กว่า",
+    description: "มินิซีรีส์ที่บอกเล่าเรื่องราวความหายนะของโรงไฟฟ้านิวเคลียร์เชอร์โนบิล ในปี 1986 และความกล้าหาญของผู้คนที่เสียสลีเพื่อช่วยยุโรปจากหายนะที่ยิ่งใหญ่กว่า",
   },
   {
     id: 1025,
@@ -1110,8 +1024,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "UK",
     trailerUrl: "https://www.youtube.com/watch?v=LZXZsew6l4M",
-    description:
-      "ชีวิตของตระกูลผู้ดีอังกฤษและคนรับใช้ของพวกเขาในช่วงต้นศตวรรษที่ 20 ท่ามกลางเหตุการณ์สำคัญทางประวัติศาสตร์และการเปลี่ยนแปลงทางสังคม",
+    description: "ชีวิตของตระกูลผู้ดีอังกฤษและคนรับใช้ของพวกเขาในช่วงต้นศตวรรษที่ 20 ท่ามกลางเหตุการณ์สำคัญทางประวัติศาสตร์และการเปลี่ยนแปลงทางสังคม",
   },
   {
     id: 1026,
@@ -1123,8 +1036,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=H7yFnOTJpJg",
-    description:
-      "ชีวิตของดอน เดรเปอร์ ผู้อำนวยการฝ่ายสร้างสรรค์ในบริษัทโฆษณาแห่งหนึ่งในนิวยอร์กยุค 1960s ท่ามกลางความหรูหรา การแข่งขัน และความลับส่วนตัว",
+    description: "ชีวิตของดอน เดรเปอร์ ผู้อำนวยการฝ่ายสร้างสรรค์ในบริษัทโฆษณาแห่งหนึ่งในนิวยอร์กยุค 1960s ท่ามกลางความหรูหรา การแข่งขัน และความลับส่วนตัว",
   },
   {
     id: 1027,
@@ -1136,8 +1048,7 @@ const db: Media[] = [
     genres: ["Drama", "Action"],
     nationality: "Korean",
     trailerUrl: "https://www.youtube.com/watch?v=oqxAJKy0ii4",
-    description:
-      "คนที่มีหนี้สินจำนวนมากได้รับเชิญให้เข้าร่วมเกมลึกลับที่มีเงินรางวัลมหาศาล แต่กลับพบว่าเกมเด็กที่ดูไร้เดียงสาเหล่านี้มีความเสี่ยงถึงชีวิต",
+    description: "คนที่มีหนี้สินจำนวนมากได้รับเชิญให้เข้าร่วมเกมลึกลับที่มีเงินรางวัลมหาศาล แต่กลับพบว่าเกมเด็กที่ดูไร้เดียงสาเหล่านี้มีความเสี่ยงถึงชีวิต",
   },
   {
     id: 1028,
@@ -1149,8 +1060,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=OzYxJV_rmE8",
-    description:
-      "ครอบครัวโรย ผู้ควบคุมอาณาจักรสื่อและความบันเทิงที่ใหญ่ที่สุดแห่งหนึ่งในโลก ต้องเผชิญการต่อสู้แย่งชิงอำนาจเมื่อพ่อผู้ก่อตั้งเริ่มแก่ตัวลง",
+    description: "ครอบครัวโรย ผู้ควบคุมอาณาจักรสื่อและความบันเทิงที่ใหญ่ที่สุดแห่งหนึ่งในโลก ต้องเผชิญการต่อสู้แย่งชิงอำนาจเมื่อพ่อผู้ก่อตั้งเริ่มแก่ตัวลง",
   },
   {
     id: 1029,
@@ -1162,8 +1072,7 @@ const db: Media[] = [
     genres: ["Drama", "Sci-fi"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=PJTonrzXTJs",
-    description:
-      "ในอนาคตดิสโทเปียที่สหรัฐอเมริกากลายเป็นระบอบเผด็จการทางศาสนา ผู้หญิงจำเป็นต้องทำหน้าที่เป็นแม่พาเพื่อให้กำเนิดบุตรให้กับชนชั้นปกครอง",
+    description: "ในอนาคตดิสโทเปียที่สหรัฐอเมริกากลายเป็นระบอบเผด็จการทางศาสนา ผู้หญิงจำเป็นต้องทำหน้าที่เป็นแม่พาเพื่อให้กำเนิดบุตรให้กับชนชั้นปกครอง",
   },
   {
     id: 1030,
@@ -1175,8 +1084,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=CDrieqwSdgI",
-    description:
-      "เด็กกำพร้าที่มีพรสวรรค์ด้านหมากรุกกลายเป็นปรากฏการณ์ในโลกหมากรุกในช่วงทศวรรษ 1950-60 ขณะที่ต้องต่อสู้กับปัญหาการติดยาและแอลกอฮอล์",
+    description: "เด็กกำพร้าที่มีพรสวรรค์ด้านหมากรุกกลายเป็นปรากฏการณ์ในโลกหมากรุกในช่วงทศวรรษ 1950-60 ขณะที่ต้องต่อสู้กับปัญหาการติดยาและแอลกอฮอล์",
   },
   {
     id: 1031,
@@ -1188,8 +1096,7 @@ const db: Media[] = [
     genres: ["Drama", "Crime Thriller"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=KMx4iFcozK0",
-    description:
-      "โทนี่ โซปราโน หัวหน้ามาเฟียในนิวเจอร์ซีย์ พยายามสมดุลชีวิตครอบครัวกับการบริหารองค์กรอาชญากรรม ขณะเดียวกันก็ต้องรับการบำบัดทางจิตเวช",
+    description: "โทนี่ โซปราโน หัวหน้ามาเฟียในนิวเจอร์ซีย์ พยายามสมดุลชีวิตครอบครัวกับการบริหารองค์กรอาชญากรรม ขณะเดียวกันก็ต้องรับการบำบัดทางจิตเวช",
   },
   {
     id: 1032,
@@ -1201,8 +1108,7 @@ const db: Media[] = [
     genres: ["Drama", "Crime Thriller"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=tlYDCuJ-c8s",
-    description:
-      "ชีวิตในเมืองบัลติมอร์ผ่านมุมมองของตำรวจ พ่อค้ายา นักการเมือง ครู และหนังสือพิมพ์ สำรวจความซับซ้อนของระบบและสถาบันต่างๆ ในสหรัฐอเมริกา",
+    description: "ชีวิตในเมืองบัลติมอร์ผ่านมุมมองของตำรวจ พ่อค้ายา นักการเมือง ครู และหนังสือพิมพ์ สำรวจความซับซ้อนของระบบและสถาบันต่างๆ ในสหรัฐอเมริกา",
   },
   {
     id: 1033,
@@ -1214,8 +1120,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "UK",
     trailerUrl: "https://www.youtube.com/watch?v=JWtnJjn6ng0",
-    description:
-      "เรื่องราวรัชสมัยของสมเด็จพระราชินีนาถเอลิซาเบธที่ 2 และเหตุการณ์สำคัญทางการเมืองและส่วนตัวที่หล่อหลอมศตวรรษที่ 20 ในสหราชอาณาจักร",
+    description: "เรื่องราวรัชสมัยของสมเด็จพระราชินีนาถเอลิซาเบธที่ 2 และเหตุการณ์สำคัญทางการเมืองและส่วนตัวที่หล่อหลอมศตวรรษที่ 20 ในสหราชอาณาจักร",
   },
   {
     id: 1034,
@@ -1227,8 +1132,7 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=wYiZ6eUru1M",
-    description:
-      "เรื่องราวของครอบครัวเพียร์สันที่เชื่อมโยงกันผ่านช่วงเวลาต่างๆ สำรวจความรัก ความสูญเสีย ชีวิต และความท้าทายที่ทุกคนต้องเผชิญ",
+    description: "เรื่องราวของครอบครัวเพียร์สันที่เชื่อมโยงกันผ่านช่วงเวลาต่างๆ สำรวจความรัก ความสูญเสีย ชีวิต และความท้าทายที่ทุกคนต้องเผชิญ",
   },
   {
     id: 1035,
@@ -1240,11 +1144,8 @@ const db: Media[] = [
     genres: ["Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=UKei_d0cbP4",
-    description:
-      "ครอบครัวดัตตันที่ควบคุมไร่ปศุสัตว์ที่ใหญ่ที่สุดในสหรัฐอเมริกา ต้องปกป้องที่ดินจากนักพัฒนาอสังหาริมทรัพย์ สถานที่สงวน และผู้ที่พยายามแย่งชิง",
+    description: "ครอบครัวดัตตันที่ควบคุมไร่ปศุสัตว์ที่ใหญ่ที่สุดในสหรัฐอเมริกา ต้องปกป้องที่ดินจากนักพัฒนาอสังหาริมทรัพย์ สถานที่สงวน และผู้ที่พยายามแย่งชิง",
   },
-
-  // === Fantasy ===
   {
     id: 1036,
     imageUrl: "/poster/series/Fantasy/American Gods.jpg",
@@ -1255,8 +1156,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=oyoXURn9oK0",
-    description:
-      "อดีตนักโทษถูกจ้างโดยชายลึกลับที่เรียกตัวเองว่า มิสเตอร์ เวนสเดย์ และพบว่าตัวเองติดอยู่ระหว่างสงครามของเทพเก่ากับเทพใหม่ในอเมริกา",
+    description: "อดีตนักโทษถูกจ้างโดยชายลึกลับที่เรียกตัวเองว่า มิสเตอร์ เวนสเดย์ และพบว่าตัวเองติดอยู่ระหว่างสงครามของเทพเก่ากับเทพใหม่ในอเมริกา",
   },
   {
     id: 1037,
@@ -1268,8 +1168,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Action", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=fXmAurh012s",
-    description:
-      "น้องสาวสองคนจากเมืองใต้ดินที่ยากจนถูกแยกจากกันท่ามกลางความขัดแย้งระหว่างเมืองบนและล่าง ในโลกของเทคโนโลยีมหัศจรรย์และความขัดแย้งทางสังคม",
+    description: "น้องสาวสองคนจากเมืองใต้ดินที่ยากจนถูกแยกจากกันท่ามกลางความขัดแย้งระหว่างเมืองบนและล่าง ในโลกของเทคโนโลยีมหัศจรรย์และความขัดแย้งทางสังคม",
   },
   {
     id: 1038,
@@ -1281,8 +1180,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Crime Thriller"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=3f0xgZxLRFw",
-    description:
-      "ในเมืองแฟนตาซีสไตล์วิคตอเรียน สิ่งมีชีวิตในตำนานหนีจากบ้านเกิดที่ถูกสงครามทำลาย และนักสืบมนุษย์ต้องแก้คดีฆาตกรรมท่ามกลางความตึงเครียดทางสังคม",
+    description: "ในเมืองแฟนตาซีสไตล์วิคตอเรียน สิ่งมีชีวิตในตำนานหนีจากบ้านเกิดที่ถูกสงครามทำลาย และนักสืบมนุษย์ต้องแก้คดีฆาตกรรมท่ามกลางความตึงเครียดทางสังคม",
   },
   {
     id: 1039,
@@ -1294,8 +1192,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Drama", "Action"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=KPLWWIOCOOQ",
-    description:
-      "ครอบครัวขุนนางหลายตระกูลต่อสู้กันเพื่อแย่งชิงบัลลังก์เหล็กและการควบคุมเจ็ดอาณาจักร ขณะที่ภัยคุกคามโบราณกำลังกลับคืนมา",
+    description: "ครอบครัวขุนนางหลายตระกูลต่อสู้กันเพื่อแย่งชิงบัลลังก์เหล็กและการควบคุมเจ็ดอาณาจักร ขณะที่ภัยคุกคามโบราณกำลังกลับคืนมา",
   },
   {
     id: 1040,
@@ -1307,8 +1204,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Comedy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=2ZFlz2y6U8M",
-    description:
-      "ทูตสวรรค์และปีศาจที่เป็นเพื่อนกันพยายามป้องกันการมาถึงของมาร์บุตรและวันสิ้นโลก เพราะพวกเขาชอบชีวิตบนโลกมากเกินไปที่จะปล่อยให้มันสิ้นสุด",
+    description: "ทูตสวรรค์และปีศาจที่เป็นเพื่อนกันพยายามป้องกันการมาถึงของมาร์บุตรและวันสิ้นโลก เพราะพวกเขาชอบชีวิตบนโลกมากเกินไปที่จะปล่อยให้มันสิ้นสุด",
   },
   {
     id: 1041,
@@ -1320,8 +1216,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Drama"],
     nationality: "UK",
     trailerUrl: "https://www.youtube.com/watch?v=APDZOKNedHs",
-    description:
-      "เด็กสาวกำพร้าและเพื่อนของเธอเริ่มต้นการเดินทางที่อันตรายข้ามจักรวาลคู่ขนาน พบกับแม่มด หมีหุ้มเกราะ และความลับที่น่าตกใจเกี่ยวกับต้นกำเนิดของเธอ",
+    description: "เด็กสาวกำพร้าและเพื่อนของเธอเริ่มต้นการเดินทางที่อันตรายข้ามจักรวาลคู่ขนาน พบกับแม่มด หมีหุ้มเกราะ และความลับที่น่าตกใจเกี่ยวกับต้นกำเนิดของเธอ",
   },
   {
     id: 1042,
@@ -1333,8 +1228,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Drama", "Action"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=DotnJ7tTA34",
-    description:
-      "เรื่องราวก่อนเหตุการณ์ Game of Thrones 200 ปี เล่าถึงราชวงศ์ทาร์แกเรียนในยุครุ่งเรืองและสงครามกลางเมืองที่นองเลือดที่เรียกว่า Dance of the Dragons",
+    description: "เรื่องราวก่อนเหตุการณ์ Game of Thrones 200 ปี เล่าถึงราชวงศ์ทาร์แกเรียนในยุครุ่งเรืองและสงครามกลางเมืองที่นองเลือดที่เรียกว่า Dance of the Dragons",
   },
   {
     id: 1043,
@@ -1346,8 +1240,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=b1WHQTbJ7vE",
-    description:
-      "เด็กกำพร้าค้นพบพลังวิเศษที่หาได้ยากในตัวเธอ ซึ่งอาจเป็นกุญแจสำคัญในการช่วยประเทศของเธอให้รอดพ้นจากความมืดที่อันตราย",
+    description: "เด็กกำพร้าค้นพบพลังวิเศษที่หาได้ยากในตัวเธอ ซึ่งอาจเป็นกุญแจสำคัญในการช่วยประเทศของเธอให้รอดพ้นจากความมืดที่อันตราย",
   },
   {
     id: 1044,
@@ -1359,8 +1252,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Drama", "Action"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=x8UAUAuKNcU",
-    description:
-      "เรื่องราวในยุคที่สองของมิดเดิลเอิร์ธ หลายพันปีก่อนเหตุการณ์ในภาพยนตร์ เล่าถึงการสร้างแหวนแห่งอำนาจและการกลับมาของความมืด",
+    description: "เรื่องราวในยุคที่สองของมิดเดิลเอิร์ธ หลายพันปีก่อนเหตุการณ์ในภาพยนตร์ เล่าถึงการสร้างแหวนแห่งอำนาจและการกลับมาของความมืด",
   },
   {
     id: 1045,
@@ -1372,8 +1264,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Horror", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=83ClbRPRDXU",
-    description:
-      "หลังจากถูกขังมานานหลายทศวรรษ จอมเวทย์แห่งความฝัน มอร์เฟอุส ต้องเดินทางข้ามโลกและเวลาเพื่อค้นหาสิ่งที่ถูกขโมยไปและฟื้นฟูอาณาจักรของเขา",
+    description: "หลังจากถูกขังมานานหลายทศวรรษ จอมเวทย์แห่งความฝัน มอร์เฟอุส ต้องเดินทางข้ามโลกและเวลาเพื่อค้นหาสิ่งที่ถูกขโมยไปและฟื้นฟูอาณาจักรของเขา",
   },
   {
     id: 1046,
@@ -1385,8 +1276,7 @@ const db: Media[] = [
     genres: ["Fantasy", "Drama", "Action"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=11ZozKpg1gM",
-    description:
-      "มอยเรน สมาชิกขององค์กรเวทมนตร์อันทรงพลัง เดินทางไปทั่วโลกพร้อมกับหนุ่มสาว 5 คน เพื่อค้นหาว่าใครคือการเกิดใหม่ของมังกร ผู้ซึ่งจะช่วยหรือทำลายมนุษยชาติ",
+    description: "มอยเรน สมาชิกขององค์กรเวทมนตร์อันทรงพลัง เดินทางไปทั่วโลกพร้อมกับหนุ่มสาว 5 คน เพื่อค้นหาว่าใครคือการเกิดใหม่ของมังกร ผู้ซึ่งจะช่วยหรือทำลายมนุษยชาติ",
   },
   {
     id: 1047,
@@ -1398,10 +1288,9 @@ const db: Media[] = [
     genres: ["Fantasy", "Action", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=ndl1W4ltcmg",
-    description:
-      "เกอราลท์แห่งริเวีย นักล่าสัตว์ประหลาดผู้กลายพันธุ์ ท่องไปในโลกที่มนุษย์มักอันตรายกว่าสัตว์ประหลาด เพื่อค้นหาโชคชะตาที่เขาหลีกหนีไม่พ้น",
+    description: "เกอราลท์แห่งริเวีย นักล่าสัตว์ประหลาดผู้กลายพันธุ์ ท่องไปในโลกที่มนุษย์มักอันตรายกว่าสัตว์ประหลาด เพื่อค้นหาโชคชะตาที่เขาหลีกหนีไม่พ้น",
   },
-   {
+  {
     id: 1048,
     imageUrl: "/poster/series/Sci-Fi/Altered Carbon.jpg",
     title: "Altered Carbon",
@@ -1411,8 +1300,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Action", "Crime Thriller"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=dhFM8akm9a4",
-    description:
-      "ในอนาคตที่จิตสำนึกของมนุษย์สามารถถ่ายโอนไปยังร่างกายใหม่ได้ อดีตทหารถูกนำกลับมามีชีวิตเพื่อแก้คดีฆาตกรรมของเศรษฐีคนหนึ่งในโลกที่ความตายไม่ใช่จุดจบอีกต่อไป",
+    description: "ในอนาคตที่จิตสำนึกของมนุษย์สามารถถ่ายโอนไปยังร่างกายใหม่ได้ อดีตทหารถูกนำกลับมามีชีวิตเพื่อแก้คดีฆาตกรรมของเศรษฐีคนหนึ่งในโลกที่ความตายไม่ใช่จุดจบอีกต่อไป",
   },
   {
     id: 1049,
@@ -1424,8 +1312,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama", "Horror"],
     nationality: "UK",
     trailerUrl: "https://www.youtube.com/watch?v=jROLrhQkK78",
-    description:
-      "ซีรีส์แอนโธโลจีที่สำรวจด้านมืดของเทคโนโลยีสมัยใหม่และผลกระทบที่มีต่อสังคมและพฤติกรรมมนุษย์ ในรูปแบบเรื่องราวที่แตกต่างกันในแต่ละตอน",
+    description: "ซีรีส์แอนโธโลจีที่สำรวจด้านมืดของเทคโนโลยีสมัยใหม่และผลกระทบที่มีต่อสังคมและพฤติกรรมมนุษย์ ในรูปแบบเรื่องราวที่แตกต่างกันในแต่ละตอน",
   },
   {
     id: 1050,
@@ -1437,8 +1324,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=wRupp6f9mgY",
-    description:
-      "กลุ่มผู้เนรเทศพยายามปกป้องอารยธรรมมนุษย์จากการล่มสลาย หลังจากนักคณิตศาสตร์อัจฉริยะทำนายถึงการล่มสลายของจักรวรรดิกาแล็กซีที่ยิ่งใหญ่",
+    description: "กลุ่มผู้เนรเทศพยายามปกป้องอารยธรรมมนุษย์จากการล่มสลาย หลังจากนักคณิตศาสตร์อัจฉริยะทำนายถึงการล่มสลายของจักรวรรดิกาแล็กซีที่ยิ่งใหญ่",
   },
   {
     id: 1051,
@@ -1450,8 +1336,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Action", "Fantasy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=nW948Va-l10",
-    description:
-      "หลังจากขโมย Tesseract โลกิถูกจับโดยองค์กรลึกลับที่เรียกว่า Time Variance Authority และถูกบังคับให้ช่วยแก้ไขเส้นเวลาที่เสียหาย ขณะเดียวกันก็ค้นพบความลับที่ยิ่งใหญ่",
+    description: "หลังจากขโมย Tesseract โลกิถูกจับโดยองค์กรลึกลับที่เรียกว่า Time Variance Authority และถูกบังคับให้ช่วยแก้ไขเส้นเวลาที่เสียหาย ขณะเดียวกันก็ค้นพบความลับที่ยิ่งใหญ่",
   },
   {
     id: 1052,
@@ -1463,8 +1348,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=xEQP4VVuyrY",
-    description:
-      "พนักงานบริษัทที่ผ่านการผ่าตัดแยกความทรงจำระหว่างชีวิตการทำงานและชีวิตส่วนตัว เริ่มตั้งคำถามถึงความเป็นจริงเมื่อเพื่อนร่วมงานค้นพบความจริงที่น่าตกใจ",
+    description: "พนักงานบริษัทที่ผ่านการผ่าตัดแยกความทรงจำระหว่างชีวิตการทำงานและชีวิตส่วนตัว เริ่มตั้งคำถามถึงความเป็นจริงเมื่อเพื่อนร่วมงานค้นพบความจริงที่น่าตกใจ",
   },
   {
     id: 1053,
@@ -1476,8 +1360,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=8ZYhuvIv1pA",
-    description:
-      "ผู้รอดชีวิต 10,000 คนอาศัยอยู่ในไซโลใต้ดินเพื่อหลบหนีจากโลกภายนอกที่เป็นพิษ แต่เมื่อมีคนเริ่มตั้งคำถามเกี่ยวกับประวัติศาสตร์และกฎเหล็ก ความจริงที่น่าตกใจเริ่มปรากฏ",
+    description: "ผู้รอดชีวิต 10,000 คนอาศัยอยู่ในไซโลใต้ดินเพื่อหลบหนีจากโลกภายนอกที่เป็นพิษ แต่เมื่อมีคนเริ่มตั้งคำถามเกี่ยวกับประวัติศาสตร์และกฎเหล็ก ความจริงที่น่าตกใจเริ่มปรากฏ",
   },
   {
     id: 1054,
@@ -1489,8 +1372,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Action", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=K05cTPbuJZs",
-    description:
-      "กัปตันคริสโตเฟอร์ ไพค์และลูกเรือของยาน USS Enterprise สำรวจโลกใหม่ๆ ทั่วกาแล็กซี ในช่วงทศวรรษก่อนเหตุการณ์ในซีรีส์ Star Trek ต้นฉบับ",
+    description: "กัปตันคริสโตเฟอร์ ไพค์และลูกเรือของยาน USS Enterprise สำรวจโลกใหม่ๆ ทั่วกาแล็กซี ในช่วงทศวรรษก่อนเหตุการณ์ในซีรีส์ Star Trek ต้นฉบับ",
   },
   {
     id: 1055,
@@ -1502,8 +1384,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Horror", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=b9EkMc79ZSU",
-    description:
-      "เมื่อเด็กชายคนหนึ่งหายตัวไปในเมืองเล็กๆ ในอินเดียนา เพื่อนๆ ของเขา แม่ และหัวหน้าตำรวจต้องเผชิญกับพลังเหนือธรรมชาติและการทดลองลับของรัฐบาล",
+    description: "เมื่อเด็กชายคนหนึ่งหายตัวไปในเมืองเล็กๆ ในอินเดียนา เพื่อนๆ ของเขา แม่ และหัวหน้าตำรวจต้องเผชิญกับพลังเหนือธรรมชาติและการทดลองลับของรัฐบาล",
   },
   {
     id: 1056,
@@ -1515,8 +1396,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama", "Horror"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=uLtkt8BonwM",
-    description:
-      "20 ปีหลังจากอารยธรรมถูกทำลายโดยเชื้อราที่กลายพันธุ์ ชายผู้แข็งกร้าวต้องพาเด็กสาววัย 14 ปีเดินทางข้ามอเมริกาที่ถูกทำลาย เพื่อค้นหาความหวังของมนุษยชาติ",
+    description: "20 ปีหลังจากอารยธรรมถูกทำลายโดยเชื้อราที่กลายพันธุ์ ชายผู้แข็งกร้าวต้องพาเด็กสาววัย 14 ปีเดินทางข้ามอเมริกาที่ถูกทำลาย เพื่อค้นหาความหวังของมนุษยชาติ",
   },
   {
     id: 1057,
@@ -1528,8 +1408,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama", "Action"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=iNjobkmzaOY",
-    description:
-      "200 ปีในอนาคต เมื่อมนุษย์ได้อาณานิคมระบบสุริยะ นักสืบ กัปตันยาน และนักการทูตต้องเปิดเผยการสมคบคิดที่อาจนำไปสู่สงครามระหว่างโลก",
+    description: "200 ปีในอนาคต เมื่อมนุษย์ได้อาณานิคมระบบสุริยะ นักสืบ กัปตันยาน และนักการทูตต้องเปิดเผยการสมคบคิดที่อาจนำไปสู่สงครามระหว่างโลก",
   },
   {
     id: 1058,
@@ -1541,8 +1420,7 @@ const db: Media[] = [
     genres: ["Sci-fi", "Action", "Fantasy"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=aOC8E8z_ifw",
-    description:
-      "นักล่าเงินรางวัลโดดเดี่ยวเดินทางไปตามขอบจักรวาล Star Wars ห่างไกลจากอำนาจของสาธารณรัฐใหม่ พร้อมกับเด็กลึกลับที่มีพลังฟอร์ซ",
+    description: "นักล่าเงินรางวัลโดดเดี่ยวเดินทางไปตามขอบจักรวาล Star Wars ห่างไกลจากอำนาจของสาธารณรัฐใหม่ พร้อมกับเด็กลึกลับที่มีพลังฟอร์ซ",
   },
   {
     id: 1059,
@@ -1554,8 +1432,8 @@ const db: Media[] = [
     genres: ["Sci-fi", "Drama"],
     nationality: "USA",
     trailerUrl: "https://www.youtube.com/watch?v=qLFBcdd6Qw0",
-    description:
-      "ในสวนสนุกที่มีแอนดรอยด์ในธีมตะวันตกเก่า แขกรายมั่งคั่งสามารถทำอะไรก็ได้โดยไม่มีผลกระทบ แต่เมื่อแอนดรอยด์เริ่มตื่นรู้ ทุกอย่างเปลี่ยนแปลงไป",
+    description: "ในสวนสนุกที่มีแอนดรอยด์ในธีมตะวันตกเก่า แขกรายมั่งคั่งสามารถทำอะไรก็ได้โดยไม่มีผลกระทบ แต่เมื่อแอนดรอยด์เริ่มตื่นรู้ ทุกอย่างเปลี่ยนแปลงไป",
   },
 ];
+
 export default db;

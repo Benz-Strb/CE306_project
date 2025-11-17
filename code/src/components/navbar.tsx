@@ -60,8 +60,8 @@ const Navbar: React.FC = () => {
     <nav className="bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 p-4 shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
       <div className="w-full flex items-center justify-between md:justify-start md:space-x-8 px-4">
         <Link to="/" onClick={handleLinkClick} className="flex items-center bg-transparent border-none cursor-pointer">
-          <div className="h-12 w-32 rounded-lg flex items-center justify-center">
-            <img src="../logo/1.png" alt="Logo" className="h-full w-full object-contain" />
+          <div className="h-16 aspect-[2.5/1] rounded-lg flex items-center justify-center overflow-hidden">
+            <img src="/logo/tlogo.png" alt="Logo" className="h-full w-full object-cover scale-110" />
           </div>
         </Link>
 

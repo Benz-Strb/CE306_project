@@ -9,7 +9,7 @@ interface Movie {
   rating: string;
   genres: string[];
   type: 'movie' | 'series';
-  episodes?: string;
+  episodes: string;
   trailerUrl?: string;
   nationality: string;
   description: string;
@@ -34,7 +34,7 @@ const AdminDashboard: React.FC = () => {
     description: ''
   });
 
-  // รายการ Genre ทั้งหมดตาม types.ts
+  // รายการ Genre ตาม types.ts
   const availableGenres = ['Action', 'Drama', 'Comedy', 'Horror', 'Sci-fi', 'Crime Thriller', 'Fantasy'];
   const availableNationalities = ['Korean', 'Thai', 'British', 'Japanese', 'USA', 'Sweden', 'UK', 'Germany', 'Canada', 'Spain'];
 
@@ -62,6 +62,12 @@ const AdminDashboard: React.FC = () => {
       alert('กรุณาเลือกหมวดหมู่อย่างน้อย 1 หมวด');
       return;
     }
+
+    // Validate episodes
+    if (!formData.episodes.trim()) {
+      alert(formData.type === 'movie' ? 'กรุณาระบุระยะเวลาของหนัง' : 'กรุณาระบุจำนวนตอนหรือซีซั่น');
+      return;
+    }
     
     const newMovie: Movie = {
       id: Date.now(),
@@ -70,7 +76,7 @@ const AdminDashboard: React.FC = () => {
       rating: formData.rating,
       genres: formData.genres,
       type: formData.type,
-      episodes: formData.type === 'series' ? formData.episodes : undefined,
+      episodes: formData.episodes,
       trailerUrl: formData.trailerUrl || undefined,
       nationality: formData.nationality,
       description: formData.description
@@ -79,6 +85,9 @@ const AdminDashboard: React.FC = () => {
     const updatedMovies = [...movies, newMovie];
     setMovies(updatedMovies);
     localStorage.setItem('admin-movies', JSON.stringify(updatedMovies));
+
+    // ส่ง event เพื่อบอกหน้าอื่นว่ามีการอัพเดทข้อมูล
+    window.dispatchEvent(new Event('storage'));
 
     // Reset form
     setFormData({
@@ -93,7 +102,7 @@ const AdminDashboard: React.FC = () => {
       description: ''
     });
 
-    alert('เพิ่มภาพยนตร์สำเร็จ!');
+    alert('เพิ่มภาพยนตร์สำเร็จ! ✅\n\nภาพยนตร์จะแสดงบนหน้าหลักทันที');
   };
 
   const handleDelete = (id: number) => {
@@ -101,6 +110,9 @@ const AdminDashboard: React.FC = () => {
       const updatedMovies = movies.filter(m => m.id !== id);
       setMovies(updatedMovies);
       localStorage.setItem('admin-movies', JSON.stringify(updatedMovies));
+      
+      // ส่ง event เพื่อบอกหน้าอื่นว่ามีการอัพเดทข้อมูล
+      window.dispatchEvent(new Event('storage'));
     }
   };
 
@@ -171,7 +183,7 @@ const AdminDashboard: React.FC = () => {
                 <select
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   value={formData.type}
-                  onChange={(e) => setFormData({...formData, type: e.target.value as 'movie' | 'series'})}
+                  onChange={(e) => setFormData({...formData, type: e.target.value as 'movie' | 'series', episodes: ''})}
                 >
                   <option value="movie">ภาพยนตร์</option>
                   <option value="series">ซีรีส์</option>
@@ -193,21 +205,24 @@ const AdminDashboard: React.FC = () => {
                 </select>
               </div>
 
-              {formData.type === 'series' && (
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    จำนวนตอน *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="เช่น 16 ตอน, Season 1-3"
-                    value={formData.episodes}
-                    onChange={(e) => setFormData({...formData, episodes: e.target.value})}
-                  />
-                </div>
-              )}
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">
+                  {formData.type === 'movie' ? 'ระยะเวลา *' : 'จำนวนตอน/ซีซั่น *'}
+                </label>
+                <input
+                  type="text"
+                  required
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  placeholder={formData.type === 'movie' ? 'เช่น 124 min, 2 ชม. 15 นาที' : 'เช่น 4 Seasons, 16 ตอน'}
+                  value={formData.episodes}
+                  onChange={(e) => setFormData({...formData, episodes: e.target.value})}
+                />
+                <p className="text-xs text-gray-500 mt-1">
+                  {formData.type === 'movie' 
+                    ? '💡 ตัวอย่าง: "124 min" หรือ "2 ชม. 15 นาที"' 
+                    : '💡 ตัวอย่าง: "4 Seasons" หรือ "16 ตอน"'}
+                </p>
+              </div>
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -270,7 +285,7 @@ const AdminDashboard: React.FC = () => {
                 type="submit"
                 className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all font-semibold shadow-md"
               >
-                เพิ่มภาพยนตร์
+                ✨ เพิ่มภาพยนตร์
               </button>
             </form>
           </div>
@@ -300,9 +315,9 @@ const AdminDashboard: React.FC = () => {
                         🌍 {movie.nationality}
                       </p>
                       <p className="text-xs text-gray-500">{movie.genres.join(', ')}</p>
-                      {movie.episodes && (
-                        <p className="text-xs text-gray-500">📺 {movie.episodes}</p>
-                      )}
+                      <p className="text-xs text-gray-500">
+                        {movie.type === 'movie' ? '⏱️' : '📺'} {movie.episodes}
+                      </p>
                     </div>
                     <button
                       onClick={() => handleDelete(movie.id)}

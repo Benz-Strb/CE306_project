@@ -1,14 +1,15 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import db from '../data/database';
 import type { Media, MediaType, Genre } from '../types/types';
 import Carousel from '../components/Carousel';
 
 const getMedia = (
+  allMedia: Media[],
   type?: MediaType,
   genre?: Genre,
   excludeId?: number
 ): Media[] => {
-  let filtered = db;
+  let filtered = allMedia;
   
   if (type) {
     filtered = filtered.filter(item => item.type === type);
@@ -32,20 +33,29 @@ const shuffleArray = (array: Media[]): Media[] => {
 };
 
 const Home: React.FC = () => {
-  const recommendedItems = useMemo(() => {
-    return shuffleArray(db).slice(0, 20);
+  // รวมข้อมูลจาก database + localStorage
+  const [allMedia, setAllMedia] = useState<Media[]>([]);
+
+  useEffect(() => {
+    const adminMovies = localStorage.getItem('admin-movies');
+    const parsedAdminMovies = adminMovies ? JSON.parse(adminMovies) : [];
+    setAllMedia([...db, ...parsedAdminMovies]);
   }, []);
 
-  const actionMovies = useMemo(() => getMedia('movie', 'Action'), []);
-  const comedyMovies = useMemo(() => getMedia('movie', 'Comedy'), []);
-  const dramaMovies = useMemo(() => getMedia('movie', 'Drama'), []);
-  const horrorMovies = useMemo(() => getMedia('movie', 'Horror'), []);
-  const sciFiMovies = useMemo(() => getMedia('movie', 'Sci-fi'), []);
-  const fantasySeries = useMemo(() => getMedia('series', 'Fantasy'), []);
-  const sciFiSeries = useMemo(() => getMedia('series', 'Sci-fi'), []);
-  const comedySeries = useMemo(() => getMedia('series', 'Comedy'), []);
-  const crimeThrillerSeries = useMemo(() => getMedia('series', 'Crime Thriller'), []);
-  const dramaSeries = useMemo(() => getMedia('series', 'Drama'), []);
+  const recommendedItems = useMemo(() => {
+    return shuffleArray(allMedia).slice(0, 20);
+  }, [allMedia]);
+
+  const actionMovies = useMemo(() => getMedia(allMedia, 'movie', 'Action'), [allMedia]);
+  const comedyMovies = useMemo(() => getMedia(allMedia, 'movie', 'Comedy'), [allMedia]);
+  const dramaMovies = useMemo(() => getMedia(allMedia, 'movie', 'Drama'), [allMedia]);
+  const horrorMovies = useMemo(() => getMedia(allMedia, 'movie', 'Horror'), [allMedia]);
+  const sciFiMovies = useMemo(() => getMedia(allMedia, 'movie', 'Sci-fi'), [allMedia]);
+  const fantasySeries = useMemo(() => getMedia(allMedia, 'series', 'Fantasy'), [allMedia]);
+  const sciFiSeries = useMemo(() => getMedia(allMedia, 'series', 'Sci-fi'), [allMedia]);
+  const comedySeries = useMemo(() => getMedia(allMedia, 'series', 'Comedy'), [allMedia]);
+  const crimeThrillerSeries = useMemo(() => getMedia(allMedia, 'series', 'Crime Thriller'), [allMedia]);
+  const dramaSeries = useMemo(() => getMedia(allMedia, 'series', 'Drama'), [allMedia]);
 
   return (
     <main className="flex-grow min-h-screen py-8">
