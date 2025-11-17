@@ -5,6 +5,10 @@ import type { Media, Genre, MediaType, Nationality } from '../types/types';
 import Carousel from '../components/Carousel';
 
 const formatGenreFromUrl = (genreParam: string = ""): Genre => {
+  if (genreParam === 'sci-fi') {
+    return 'Sci-fi';
+  }
+
   return genreParam
     .split('-')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -25,6 +29,7 @@ export const GenrePage: React.FC = () => {
     : location.pathname.startsWith('/series') ? 'series' : null;
 
   const targetGenre = genreParam ? formatGenreFromUrl(genreParam) : undefined;
+  
   const availableGenres = mediaType === 'movie' ? movieGenres : seriesGenres;
 
   const handleGenreChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -32,28 +37,17 @@ export const GenrePage: React.FC = () => {
     navigate(newPath);
   };
 
-  // แก้ path ให้ถูกต้อง - ใช้ basePath โดยตรง
   const basePath = mediaType === 'movie' ? '/movies' : '/series';
   const currentSelectValue = targetGenre 
-    ? `${basePath}/${genreParam}` 
+    ? `${basePath}/${genreParam}`
     : basePath;
 
   const carouselsData = useMemo(() => {
-    console.log('=== GenrePage Debug ===');
-    console.log('mediaType:', mediaType);
-    console.log('targetGenre:', targetGenre);
-    console.log('Total items in db:', db.length);
-
     const genreFilteredMedia = db.filter(item => {
       const typeMatch = !mediaType || item.type === mediaType;
       const genreMatch = !targetGenre || item.genres.includes(targetGenre);
-      
-      console.log(`Item: ${item.title}, Type: ${item.type}, Genres: ${item.genres.join(', ')}, TypeMatch: ${typeMatch}, GenreMatch: ${genreMatch}`);
-      
       return typeMatch && genreMatch;
     });
-
-    console.log('Filtered items:', genreFilteredMedia.length);
 
     const groupedByNationality: { [key in Nationality]?: Media[] } = {};
     for (const item of genreFilteredMedia) {
@@ -69,9 +63,6 @@ export const GenrePage: React.FC = () => {
         items: groupedByNationality[nat] || []
       }))
       .filter(group => group.items.length > 0);
-
-    console.log('Carousels to display:', result.length);
-    console.log('===================');
 
     return result;
   }, [mediaType, targetGenre]);
@@ -92,7 +83,6 @@ export const GenrePage: React.FC = () => {
               onChange={handleGenreChange}
               className="bg-purple-600 text-white p-2 rounded border border-purple-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              {/* แก้ตรงนี้ - ใช้ basePath แทน /${mediaType}s */}
               <option value={basePath}>แนว (ทั้งหมด)</option>
               {availableGenres.map(genre => {
                 const genrePath = `${basePath}/${genre.toLowerCase().replace(' ', '-')}`;

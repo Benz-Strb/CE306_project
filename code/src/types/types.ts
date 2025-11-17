@@ -9,7 +9,7 @@ export type Genre =
   | 'Crime Thriller' 
   | 'Fantasy';
 
-export type Nationality =  | 'Korean' | 'Thai' | 'British' | 'Japanese' | 'USA' |'Sweden'|'UK'|'Germany'| "Canada"|'Spain';
+export type Nationality = 'Korean' | 'Japanese' | 'USA' | 'Sweden' | 'UK' | 'Germany' | 'Canada' | 'Spain';
 
 export interface Media {
   id: number;
