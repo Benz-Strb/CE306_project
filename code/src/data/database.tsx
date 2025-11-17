@@ -4,7 +4,7 @@ const db: Media[] = [
   // id หนัง เริ่มที่ 1, id ซีรี่ส์ เริ่มที่ 1000
   {
     id: 1,
-    imageUrl: "./poster/moive/Action/avengers-endgame.jpg",
+    imageUrl: "/poster/moive/Action/avengers-endgame.jpg",
     title: "Avengers: Endgame",
     rating: "13+",
     episodes: "3h 1m",
@@ -17,7 +17,7 @@ const db: Media[] = [
   },
   {
     id: 2,
-    imageUrl: "./poster/moive/Action/john-wick.jpg",
+    imageUrl: "/poster/moive/Action/john-wick.jpg",
     title: "John Wick",
     rating: "18+",
     episodes: "1h 41m",
@@ -30,7 +30,7 @@ const db: Media[] = [
   },
   {
     id: 3,
-    imageUrl: "./poster/moive/Action/die-hard.jpg",
+    imageUrl: "/poster/moive/Action/die-hard.jpg",
     title: "Die Hard",
     rating: "18+",
     episodes: "2h 12m",
@@ -43,7 +43,7 @@ const db: Media[] = [
   },
   {
     id: 4,
-    imageUrl: "./poster/moive/Action/knight-rider-2000.jpg",
+    imageUrl: "/poster/moive/Action/knight-rider-2000.jpg",
     title: "Knight Rider 2000",
     rating: "18+",
     episodes: "1h 31m",
@@ -56,7 +56,7 @@ const db: Media[] = [
   },
   {
     id: 5,
-    imageUrl: "./poster/moive/Action/mad-max-fury-road.jpg",
+    imageUrl: "/poster/moive/Action/mad-max-fury-road.jpg",
     title: "Mad Max: Fury Road",
     rating: "18+",
     episodes: "120 min",
@@ -69,7 +69,7 @@ const db: Media[] = [
   },
   {
     id: 6,
-    imageUrl: "./poster/moive/Action/mission-impossible-fallout.jpg",
+    imageUrl: "/poster/moive/Action/mission-impossible-fallout.jpg",
     title: "Mission: Impossible - Fallout",
     rating: "13+",
     episodes: "147 min",
@@ -82,7 +82,7 @@ const db: Media[] = [
   },
   {
     id: 7,
-    imageUrl: "./poster/moive/Action/serbuan-maut.jpg",
+    imageUrl: "/poster/moive/Action/serbuan-maut.jpg",
     title: "The Raid: Redemption",
     rating: "18+",
     episodes: "101 min",
@@ -95,7 +95,7 @@ const db: Media[] = [
   },
   {
     id: 8,
-    imageUrl: "./poster/moive/Action/terminator-2-judgment-day.jpg",
+    imageUrl: "/poster/moive/Action/terminator-2-judgment-day.jpg",
     title: "Terminator 2: Judgment Day",
     rating: "18+",
     episodes: "137 min",
@@ -108,7 +108,7 @@ const db: Media[] = [
   },
   {
     id: 9,
-    imageUrl: "./poster/moive/Action/the-dark-knight.jpg",
+    imageUrl: "/poster/moive/Action/the-dark-knight.jpg",
     title: "The Dark Knight",
     rating: "13+",
     episodes: "152 min",
@@ -121,7 +121,7 @@ const db: Media[] = [
   },
   {
     id: 10,
-    imageUrl: "./poster/moive/Action/the-matrix.jpg",
+    imageUrl: "/poster/moive/Action/the-matrix.jpg",
     title: "The Matrix",
     rating: "18+",
     episodes: "136 min",
@@ -134,7 +134,7 @@ const db: Media[] = [
   },
   {
     id: 11,
-    imageUrl: "./poster/moive/Action/top-gun-maverick.jpg",
+    imageUrl: "/poster/moive/Action/top-gun-maverick.jpg",
     title: "Top Gun: Maverick",
     rating: "13+",
     episodes: "131 min",
@@ -147,7 +147,7 @@ const db: Media[] = [
   },
   {
     id: 12,
-    imageUrl: "./poster/moive/Comedy/airplane.jpg",
+    imageUrl: "/poster/moive/Comedy/airplane.jpg",
     title: "Airplane!",
     rating: "7+",
     episodes: "88 min",
@@ -160,7 +160,7 @@ const db: Media[] = [
   },
   {
     id: 13,
-    imageUrl: "./poster/moive/Comedy/bridesmaids.jpg",
+    imageUrl: "/poster/moive/Comedy/bridesmaids.jpg",
     title: "Bridesmaids",
     rating: "18+",
     episodes: "125 min",
@@ -173,7 +173,7 @@ const db: Media[] = [
   },
   {
     id: 14,
-    imageUrl: "./poster/moive/Comedy/dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb.jpg",
+    imageUrl: "/poster/moive/Comedy/dr-strangelove-or-how-i-learned-to-stop-worrying-and-love-the-bomb.jpg",
     title: "Dr. Strangelove",
     rating: "7+",
     episodes: "95 min",
@@ -186,7 +186,7 @@ const db: Media[] = [
   },
   {
     id: 15,
-    imageUrl: "./poster/moive/Comedy/groundhog-day.jpg",
+    imageUrl: "/poster/moive/Comedy/groundhog-day.jpg",
     title: "Groundhog Day",
     rating: "7+",
     episodes: "101 min",
@@ -199,7 +199,7 @@ const db: Media[] = [
   },
   {
     id: 16,
-    imageUrl: "./poster/moive/Comedy/happy-gilmore.jpg",
+    imageUrl: "/poster/moive/Comedy/happy-gilmore.jpg",
     title: "Happy Gilmore",
     rating: "13+",
     episodes: "92 min",
@@ -212,7 +212,7 @@ const db: Media[] = [
   },
   {
     id: 17,
-    imageUrl: "./poster/moive/Comedy/monty-python-and-the-holy-grail.jpg",
+    imageUrl: "/poster/moive/Comedy/monty-python-and-the-holy-grail.jpg",
     title: "Monty Python and the Holy Grail",
     rating: "7+",
     episodes: "91 min",
@@ -225,7 +225,7 @@ const db: Media[] = [
   },
   {
     id: 18,
-    imageUrl: "./poster/moive/Comedy/office-space.jpg",
+    imageUrl: "/poster/moive/Comedy/office-space.jpg",
     title: "Office Space",
     rating: "18+",
     episodes: "89 min",
@@ -238,7 +238,7 @@ const db: Media[] = [
   },
   {
     id: 19,
-    imageUrl: "./poster/moive/Comedy/shaun-of-the-dead.jpg",
+    imageUrl: "/poster/moive/Comedy/shaun-of-the-dead.jpg",
     title: "Shaun of the Dead",
     rating: "18+",
     episodes: "99 min",
@@ -251,7 +251,7 @@ const db: Media[] = [
   },
   {
     id: 20,
-    imageUrl: "./poster/moive/Comedy/the-big-lebowski.jpg",
+    imageUrl: "/poster/moive/Comedy/the-big-lebowski.jpg",
     title: "The Big Lebowski",
     rating: "18+",
     episodes: "117 min",
@@ -264,7 +264,7 @@ const db: Media[] = [
   },
   {
     id: 21,
-    imageUrl: "./poster/moive/Comedy/the-naked-gun-from-the-files-of-police-squad.jpg",
+    imageUrl: "/poster/moive/Comedy/the-naked-gun-from-the-files-of-police-squad.jpg",
     title: "The Naked Gun: From the Files of Police Squad!",
     rating: "13+",
     episodes: "85 min",
@@ -277,7 +277,7 @@ const db: Media[] = [
   },
   {
     id: 22,
-    imageUrl: "./poster/moive/Comedy/the-notebook.jpg",
+    imageUrl: "/poster/moive/Comedy/the-notebook.jpg",
     title: "The Notebook",
     rating: "13+",
     episodes: "123 min",
@@ -290,7 +290,7 @@ const db: Media[] = [
   },
   {
     id: 23,
-    imageUrl: "./poster/moive/Comedy/when-harry-met-sally.jpg",
+    imageUrl: "/poster/moive/Comedy/when-harry-met-sally.jpg",
     title: "When Harry Met Sally...",
     rating: "18+",
     episodes: "96 min",
@@ -368,7 +368,7 @@ const db: Media[] = [
   },
   {
     id: 29,
-    imageUrl: "./poster/moive/Drama/Parasite.jpg",
+    imageUrl: "/poster/moive/Drama/Parasite.jpg",
     title: "Parasite",
     rating: "18+",
     episodes: "132 min",
@@ -433,7 +433,7 @@ const db: Media[] = [
   },
   {
     id: 34,
-    imageUrl: "./poster/moive/Drama/undead-or-alive-a-zombedy.jpg",
+    imageUrl: "/poster/moive/Drama/undead-or-alive-a-zombedy.jpg",
     title: "Undead or Alive: A Zombedy",
     rating: "13+",
     episodes: "91 min",
@@ -511,7 +511,7 @@ const db: Media[] = [
   },
   {
     id: 40,
-    imageUrl: "./poster/moive/Horror/jaws.jpg",
+    imageUrl: "/poster/moive/Horror/jaws.jpg",
     title: "Jaws",
     rating: "13+",
     episodes: "124 min",
@@ -614,7 +614,7 @@ const db: Media[] = [
       "กลุ่มนักวิจัยชาวอเมริกันในแอนตาร์กติกาพบกับสิ่งมีชีวิตต่างดาวปรสิตที่ดูดกลืมและเลียนแบบสิ่งมีชีวิตอื่น",
   },
 
-  // === Sci-Fi ===
+  // === Sci-fi ===
   {
     id: 48,
     imageUrl: "/poster/moive/Sci-Fi/a-space-odyssey.jpg",
@@ -747,7 +747,7 @@ const db: Media[] = [
   },
   {
     id: 58,
-    imageUrl: "./poster/moive/Sci-Fi/lola-rennt.jpg",
+    imageUrl: "/poster/moive/Sci-Fi/lola-rennt.jpg",
     title: "Run Lola Run",
     rating: "18+",
     episodes: "81 min",
@@ -774,7 +774,7 @@ const db: Media[] = [
 
   {
     id: 1000,
-    imageUrl: "./poster/series/Comedy/Barry.jpg",
+    imageUrl: "/poster/series/Comedy/Barry.jpg",
     title: "Barry",
     rating: "18+",
     episodes: "4 Seasons",
@@ -787,7 +787,7 @@ const db: Media[] = [
   },
   {
     id: 1001,
-    imageUrl: "./poster/series/Comedy/Brooklyn Nine-Nine.jpg",
+    imageUrl: "/poster/series/Comedy/Brooklyn Nine-Nine.jpg",
     title: "Brooklyn Nine-Nine",
     rating: "13+",
     episodes: "8 Seasons",
@@ -800,7 +800,7 @@ const db: Media[] = [
   },
   {
     id: 1002,
-    imageUrl: "./poster/series/Comedy/Community.jpg",
+    imageUrl: "/poster/series/Comedy/Community.jpg",
     title: "Community",
     rating: "13+",
     episodes: "6 Seasons",
@@ -813,7 +813,7 @@ const db: Media[] = [
   },
   {
     id: 1003,
-    imageUrl: "./poster/series/Comedy/Fleabag.jpg",
+    imageUrl: "/poster/series/Comedy/Fleabag.jpg",
     title: "Fleabag",
     rating: "18+",
     episodes: "2 Seasons",
@@ -826,7 +826,7 @@ const db: Media[] = [
   },
   {
     id: 1004,
-    imageUrl: "./poster/series/Comedy/Friends.jpg",
+    imageUrl: "/poster/series/Comedy/Friends.jpg",
     title: "Friends",
     rating: "13+",
     episodes: "10 Seasons",
@@ -839,7 +839,7 @@ const db: Media[] = [
   },
   {
     id: 1005,
-    imageUrl: "./poster/series/Comedy/Parks and Recreation.jpg",
+    imageUrl: "/poster/series/Comedy/Parks and Recreation.jpg",
     title: "Parks and Recreation",
     rating: "13+",
     episodes: "7 Seasons",
@@ -852,7 +852,7 @@ const db: Media[] = [
   },
   {
     id: 1006,
-    imageUrl: "./poster/series/Comedy/Schitt's Creek.jpg",
+    imageUrl: "/poster/series/Comedy/Schitt's Creek.jpg",
     title: "Schitt's Creek",
     rating: "13+",
     episodes: "6 Seasons",
@@ -865,7 +865,7 @@ const db: Media[] = [
   },
   {
     id: 1007,
-    imageUrl: "./poster/series/Comedy/Silicon Valley.jpg",
+    imageUrl: "/poster/series/Comedy/Silicon Valley.jpg",
     title: "Silicon Valley",
     rating: "18+",
     episodes: "6 Seasons",
@@ -878,7 +878,7 @@ const db: Media[] = [
   },
   {
     id: 1008,
-    imageUrl: "./poster/series/Comedy/Ted Lasso.jpg",
+    imageUrl: "/poster/series/Comedy/Ted Lasso.jpg",
     title: "Ted Lasso",
     rating: "13+",
     episodes: "3 Seasons",
@@ -891,7 +891,7 @@ const db: Media[] = [
   },
   {
     id: 1009,
-    imageUrl: "./poster/series/Comedy/The Marvelous Mrs. Maisel.jpg",
+    imageUrl: "/poster/series/Comedy/The Marvelous Mrs. Maisel.jpg",
     title: "The Marvelous Mrs. Maisel",
     rating: "18+",
     episodes: "5 Seasons",
@@ -904,7 +904,7 @@ const db: Media[] = [
   },
   {
     id: 1010,
-    imageUrl: "./poster/series/Comedy/The Office (US).jpg",
+    imageUrl: "/poster/series/Comedy/The Office (US).jpg",
     title: "The Office (US)",
     rating: "13+",
     episodes: "9 Seasons",
@@ -917,7 +917,7 @@ const db: Media[] = [
   },
   {
     id: 1011,
-    imageUrl: "./poster/series/Comedy/What We Do in the Shadows.jpg",
+    imageUrl: "/poster/series/Comedy/What We Do in the Shadows.jpg",
     title: "What We Do in the Shadows",
     rating: "18+",
     episodes: "6 Seasons",
@@ -932,7 +932,7 @@ const db: Media[] = [
   // === Crime Thriller ===
   {
     id: 1012,
-    imageUrl: "./poster/series/Crime  Thriller/Better Call Saul.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Better Call Saul.jpg",
     title: "Better Call Saul",
     rating: "18+",
     episodes: "6 Seasons",
@@ -945,7 +945,7 @@ const db: Media[] = [
   },
   {
     id: 1013,
-    imageUrl: "./poster/series/Crime  Thriller/Breaking Bad.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Breaking Bad.jpg",
     title: "Breaking Bad",
     rating: "18+",
     episodes: "5 Seasons",
@@ -958,7 +958,7 @@ const db: Media[] = [
   },
   {
     id: 1014,
-    imageUrl: "./poster/series/Crime  Thriller/Dexter.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Dexter.jpg",
     title: "Dexter",
     rating: "18+",
     episodes: "8 Seasons",
@@ -971,7 +971,7 @@ const db: Media[] = [
   },
   {
     id: 1015,
-    imageUrl: "./poster/series/Crime  Thriller/Fargo.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Fargo.jpg",
     title: "Fargo",
     rating: "18+",
     episodes: "5 Seasons",
@@ -984,7 +984,7 @@ const db: Media[] = [
   },
   {
     id: 1016,
-    imageUrl: "./poster/series/Crime  Thriller/Mindhunter.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Mindhunter.jpg",
     title: "Mindhunter",
     rating: "18+",
     episodes: "2 Seasons",
@@ -997,7 +997,7 @@ const db: Media[] = [
   },
   {
     id: 1017,
-    imageUrl: "./poster/series/Crime  Thriller/Money Heist (La Casa de Papel).jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Money Heist (La Casa de Papel).jpg",
     title: "Money Heist (La Casa de Papel)",
     rating: "18+",
     episodes: "5 Seasons",
@@ -1010,7 +1010,7 @@ const db: Media[] = [
   },
   {
     id: 1018,
-    imageUrl: "./poster/series/Crime  Thriller/Narcos.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Narcos.jpg",
     title: "Narcos",
     rating: "18+",
     episodes: "3 Seasons",
@@ -1023,7 +1023,7 @@ const db: Media[] = [
   },
   {
     id: 1019,
-    imageUrl: "./poster/series/Crime  Thriller/Ozark.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Ozark.jpg",
     title: "Ozark",
     rating: "18+",
     episodes: "4 Seasons",
@@ -1036,7 +1036,7 @@ const db: Media[] = [
   },
   {
     id: 1020,
-    imageUrl: "./poster/series/Crime  Thriller/Peaky Blinders.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Peaky Blinders.jpg",
     title: "Peaky Blinders",
     rating: "18+",
     episodes: "6 Seasons",
@@ -1049,7 +1049,7 @@ const db: Media[] = [
   },
   {
     id: 1021,
-    imageUrl: "./poster/series/Crime  Thriller/Sherlock.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/Sherlock.jpg",
     title: "Sherlock",
     rating: "13+",
     episodes: "4 Seasons",
@@ -1062,7 +1062,7 @@ const db: Media[] = [
   },
   {
     id: 1022,
-    imageUrl: "./poster/series/Crime  Thriller/The Sinner.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/The Sinner.jpg",
     title: "The Sinner",
     rating: "18+",
     episodes: "4 Seasons",
@@ -1075,7 +1075,7 @@ const db: Media[] = [
   },
   {
     id: 1023,
-    imageUrl: "./poster/series/Crime  Thriller/True Detective.jpg",
+    imageUrl: "/poster/series/Crime  Thriller/True Detective.jpg",
     title: "True Detective",
     rating: "18+",
     episodes: "4 Seasons",
@@ -1089,7 +1089,7 @@ const db: Media[] = [
 
  {
     id: 1024,
-    imageUrl: "./poster/series/Drama/Chernobyl.jpg",
+    imageUrl: "/poster/series/Drama/Chernobyl.jpg",
     title: "Chernobyl",
     rating: "18+",
     episodes: "1 Season (Miniseries)",
@@ -1102,7 +1102,7 @@ const db: Media[] = [
   },
   {
     id: 1025,
-    imageUrl: "./poster/series/Drama/Downton Abbey.jpg",
+    imageUrl: "/poster/series/Drama/Downton Abbey.jpg",
     title: "Downton Abbey",
     rating: "13+",
     episodes: "6 Seasons",
@@ -1115,7 +1115,7 @@ const db: Media[] = [
   },
   {
     id: 1026,
-    imageUrl: "./poster/series/Drama/Mad Men.jpg",
+    imageUrl: "/poster/series/Drama/Mad Men.jpg",
     title: "Mad Men",
     rating: "18+",
     episodes: "7 Seasons",
@@ -1128,7 +1128,7 @@ const db: Media[] = [
   },
   {
     id: 1027,
-    imageUrl: "./poster/series/Drama/Squid Game3.jpg",
+    imageUrl: "/poster/series/Drama/Squid Game3.jpg",
     title: "Squid Game",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1141,7 +1141,7 @@ const db: Media[] = [
   },
   {
     id: 1028,
-    imageUrl: "./poster/series/Drama/Succession.jpg",
+    imageUrl: "/poster/series/Drama/Succession.jpg",
     title: "Succession",
     rating: "18+",
     episodes: "4 Seasons",
@@ -1154,7 +1154,7 @@ const db: Media[] = [
   },
   {
     id: 1029,
-    imageUrl: "./poster/series/Drama/The Handmaid's Tale.jpg",
+    imageUrl: "/poster/series/Drama/The Handmaid's Tale.jpg",
     title: "The Handmaid's Tale",
     rating: "18+",
     episodes: "5 Seasons",
@@ -1167,7 +1167,7 @@ const db: Media[] = [
   },
   {
     id: 1030,
-    imageUrl: "./poster/series/Drama/The Queen's Gambit.jpg",
+    imageUrl: "/poster/series/Drama/The Queen's Gambit.jpg",
     title: "The Queen's Gambit",
     rating: "18+",
     episodes: "1 Season (Miniseries)",
@@ -1180,7 +1180,7 @@ const db: Media[] = [
   },
   {
     id: 1031,
-    imageUrl: "./poster/series/Drama/The Sopranos.jpg",
+    imageUrl: "/poster/series/Drama/The Sopranos.jpg",
     title: "The Sopranos",
     rating: "18+",
     episodes: "6 Seasons",
@@ -1193,7 +1193,7 @@ const db: Media[] = [
   },
   {
     id: 1032,
-    imageUrl: "./poster/series/Drama/The Wire.jpg",
+    imageUrl: "/poster/series/Drama/The Wire.jpg",
     title: "The Wire",
     rating: "18+",
     episodes: "5 Seasons",
@@ -1206,7 +1206,7 @@ const db: Media[] = [
   },
   {
     id: 1033,
-    imageUrl: "./poster/series/Drama/TheCrown.jpg",
+    imageUrl: "/poster/series/Drama/TheCrown.jpg",
     title: "The Crown",
     rating: "13+",
     episodes: "6 Seasons",
@@ -1219,7 +1219,7 @@ const db: Media[] = [
   },
   {
     id: 1034,
-    imageUrl: "./poster/series/Drama/This Is Us.jpg",
+    imageUrl: "/poster/series/Drama/This Is Us.jpg",
     title: "This Is Us",
     rating: "13+",
     episodes: "6 Seasons",
@@ -1232,7 +1232,7 @@ const db: Media[] = [
   },
   {
     id: 1035,
-    imageUrl: "./poster/series/Drama/Yellowstone.jpg",
+    imageUrl: "/poster/series/Drama/Yellowstone.jpg",
     title: "Yellowstone",
     rating: "18+",
     episodes: "5 Seasons",
@@ -1247,7 +1247,7 @@ const db: Media[] = [
   // === Fantasy ===
   {
     id: 1036,
-    imageUrl: "./poster/series/Fantasy/American Gods.jpg",
+    imageUrl: "/poster/series/Fantasy/American Gods.jpg",
     title: "American Gods",
     rating: "18+",
     episodes: "3 Seasons",
@@ -1260,7 +1260,7 @@ const db: Media[] = [
   },
   {
     id: 1037,
-    imageUrl: "./poster/series/Fantasy/Arcane.jpg",
+    imageUrl: "/poster/series/Fantasy/Arcane.jpg",
     title: "Arcane",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1273,7 +1273,7 @@ const db: Media[] = [
   },
   {
     id: 1038,
-    imageUrl: "./poster/series/Fantasy/Carnival Row.jpg",
+    imageUrl: "/poster/series/Fantasy/Carnival Row.jpg",
     title: "Carnival Row",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1286,7 +1286,7 @@ const db: Media[] = [
   },
   {
     id: 1039,
-    imageUrl: "./poster/series/Fantasy/Game of Thrones.jpg",
+    imageUrl: "/poster/series/Fantasy/Game of Thrones.jpg",
     title: "Game of Thrones",
     rating: "18+",
     episodes: "8 Seasons",
@@ -1299,7 +1299,7 @@ const db: Media[] = [
   },
   {
     id: 1040,
-    imageUrl: "./poster/series/Fantasy/Good Omens.jpg",
+    imageUrl: "/poster/series/Fantasy/Good Omens.jpg",
     title: "Good Omens",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1312,7 +1312,7 @@ const db: Media[] = [
   },
   {
     id: 1041,
-    imageUrl: "./poster/series/Fantasy/His Dark Materials.jpg",
+    imageUrl: "/poster/series/Fantasy/His Dark Materials.jpg",
     title: "His Dark Materials",
     rating: "13+",
     episodes: "3 Seasons",
@@ -1325,7 +1325,7 @@ const db: Media[] = [
   },
   {
     id: 1042,
-    imageUrl: "./poster/series/Fantasy/House of the Dragon.jpg",
+    imageUrl: "/poster/series/Fantasy/House of the Dragon.jpg",
     title: "House of the Dragon",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1338,7 +1338,7 @@ const db: Media[] = [
   },
   {
     id: 1043,
-    imageUrl: "./poster/series/Fantasy/Shadow and Bone.jpg",
+    imageUrl: "/poster/series/Fantasy/Shadow and Bone.jpg",
     title: "Shadow and Bone",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1351,7 +1351,7 @@ const db: Media[] = [
   },
   {
     id: 1044,
-    imageUrl: "./poster/series/Fantasy/The Lord of the Rings-The Rings of Power.jpg",
+    imageUrl: "/poster/series/Fantasy/The Lord of the Rings-The Rings of Power.jpg",
     title: "The Lord of the Rings: The Rings of Power",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1364,7 +1364,7 @@ const db: Media[] = [
   },
   {
     id: 1045,
-    imageUrl: "./poster/series/Fantasy/The Sandman.jpg",
+    imageUrl: "/poster/series/Fantasy/The Sandman.jpg",
     title: "The Sandman",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1377,7 +1377,7 @@ const db: Media[] = [
   },
   {
     id: 1046,
-    imageUrl: "./poster/series/Fantasy/The Wheel of Time.jpg",
+    imageUrl: "/poster/series/Fantasy/The Wheel of Time.jpg",
     title: "The Wheel of Time",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1390,7 +1390,7 @@ const db: Media[] = [
   },
   {
     id: 1047,
-    imageUrl: "./poster/series/Fantasy/The Witcher.jpg",
+    imageUrl: "/poster/series/Fantasy/The Witcher.jpg",
     title: "The Witcher",
     rating: "18+",
     episodes: "3 Seasons",
@@ -1403,7 +1403,7 @@ const db: Media[] = [
   },
    {
     id: 1048,
-    imageUrl: "./poster/series/Sci-Fi/Altered Carbon.jpg",
+    imageUrl: "/poster/series/Sci-Fi/Altered Carbon.jpg",
     title: "Altered Carbon",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1416,7 +1416,7 @@ const db: Media[] = [
   },
   {
     id: 1049,
-    imageUrl: "./poster/series/Sci-Fi/black-mirror.jpg",
+    imageUrl: "/poster/series/Sci-Fi/black-mirror.jpg",
     title: "Black Mirror",
     rating: "18+",
     episodes: "6 Seasons",
@@ -1429,7 +1429,7 @@ const db: Media[] = [
   },
   {
     id: 1050,
-    imageUrl: "./poster/series/Sci-Fi/Foundation.jpg",
+    imageUrl: "/poster/series/Sci-Fi/Foundation.jpg",
     title: "Foundation",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1442,7 +1442,7 @@ const db: Media[] = [
   },
   {
     id: 1051,
-    imageUrl: "./poster/series/Sci-Fi/Loki.jpg",
+    imageUrl: "/poster/series/Sci-Fi/Loki.jpg",
     title: "Loki",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1455,7 +1455,7 @@ const db: Media[] = [
   },
   {
     id: 1052,
-    imageUrl: "./poster/series/Sci-Fi/Severance.jpg",
+    imageUrl: "/poster/series/Sci-Fi/Severance.jpg",
     title: "Severance",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1468,7 +1468,7 @@ const db: Media[] = [
   },
   {
     id: 1053,
-    imageUrl: "./poster/series/Sci-Fi/Silo.jpg",
+    imageUrl: "/poster/series/Sci-Fi/Silo.jpg",
     title: "Silo",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1481,7 +1481,7 @@ const db: Media[] = [
   },
   {
     id: 1054,
-    imageUrl: "./poster/series/Sci-Fi/Star-Trek-Strange New Worlds.jpg",
+    imageUrl: "/poster/series/Sci-Fi/Star-Trek-Strange New Worlds.jpg",
     title: "Star Trek: Strange New Worlds",
     rating: "13+",
     episodes: "2 Seasons",
@@ -1494,7 +1494,7 @@ const db: Media[] = [
   },
   {
     id: 1055,
-    imageUrl: "./poster/series/Sci-Fi/stranger-things.jpg",
+    imageUrl: "/poster/series/Sci-Fi/stranger-things.jpg",
     title: "Stranger Things",
     rating: "13+",
     episodes: "4 Seasons",
@@ -1507,7 +1507,7 @@ const db: Media[] = [
   },
   {
     id: 1056,
-    imageUrl: "./poster/series/Sci-Fi/The Last of Us.jpg",
+    imageUrl: "/poster/series/Sci-Fi/The Last of Us.jpg",
     title: "The Last of Us",
     rating: "18+",
     episodes: "2 Seasons",
@@ -1520,7 +1520,7 @@ const db: Media[] = [
   },
   {
     id: 1057,
-    imageUrl: "./poster/series/Sci-Fi/the-expanse.jpg",
+    imageUrl: "/poster/series/Sci-Fi/the-expanse.jpg",
     title: "The Expanse",
     rating: "18+",
     episodes: "6 Seasons",
@@ -1533,7 +1533,7 @@ const db: Media[] = [
   },
   {
     id: 1058,
-    imageUrl: "./poster/series/Sci-Fi/the-mandalorian.jpg",
+    imageUrl: "/poster/series/Sci-Fi/the-mandalorian.jpg",
     title: "The Mandalorian",
     rating: "13+",
     episodes: "3 Seasons",
@@ -1546,7 +1546,7 @@ const db: Media[] = [
   },
   {
     id: 1059,
-    imageUrl: "./poster/series/Sci-Fi/Westworld.jpg",
+    imageUrl: "/poster/series/Sci-Fi/Westworld.jpg",
     title: "Westworld",
     rating: "18+",
     episodes: "4 Seasons",

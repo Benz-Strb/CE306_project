@@ -69,7 +69,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title }) => {
         <div
           ref={scrollRef}
           onScroll={checkScroll}
-          className="flex gap-4 overflow-x-auto scrollbar-hide px-4 md:px-8 scroll-smooth py-16"
+          className="flex gap-4 overflow-x-auto overflow-y-visible scrollbar-hide px-4 md:px-8 scroll-smooth py-16"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {items.map((item) => (

@@ -32,9 +32,11 @@ export const GenrePage: React.FC = () => {
     navigate(newPath);
   };
 
+  // แก้ path ให้ถูกต้อง - ใช้ basePath โดยตรง
+  const basePath = mediaType === 'movie' ? '/movies' : '/series';
   const currentSelectValue = targetGenre 
-    ? `/${mediaType}s/${genreParam}` 
-    : `/${mediaType}s`;
+    ? `${basePath}/${genreParam}` 
+    : basePath;
 
   const carouselsData = useMemo(() => {
     console.log('=== GenrePage Debug ===');
@@ -90,9 +92,10 @@ export const GenrePage: React.FC = () => {
               onChange={handleGenreChange}
               className="bg-purple-600 text-white p-2 rounded border border-purple-700 cursor-pointer focus:outline-none focus:ring-2 focus:ring-purple-500"
             >
-              <option value={`/${mediaType}s`}>แนว (ทั้งหมด)</option>
+              {/* แก้ตรงนี้ - ใช้ basePath แทน /${mediaType}s */}
+              <option value={basePath}>แนว (ทั้งหมด)</option>
               {availableGenres.map(genre => {
-                const genrePath = `/${mediaType}s/${genre.toLowerCase().replace(' ', '-')}`;
+                const genrePath = `${basePath}/${genre.toLowerCase().replace(' ', '-')}`;
                 return (
                   <option 
                     key={genre} 
@@ -119,7 +122,7 @@ export const GenrePage: React.FC = () => {
         ) : (
           <div className="text-center py-20">
             <p className="text-gray-600 text-xl mb-2">ไม่พบรายการที่ตรงกัน</p>
-            <p className="text-gray-500 text-sm">ลองเลือกหมวดหมู่อื่นดูนะครับ</p>
+            <p className="text-gray-500 text-sm">ลองเลือกหมวดหมู่อื่นดูนะ</p>
           </div>
         )}
       </div>
