@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
-import Navbar from './components/Navbar';
+import Navbar from './components/navbar';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import Register from './pages/Register';

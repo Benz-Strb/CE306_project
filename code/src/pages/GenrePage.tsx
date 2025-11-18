@@ -84,7 +84,7 @@ export const GenrePage: React.FC = () => {
   return (
     <main className="flex-grow min-h-screen py-8">
       <div className="flex items-center justify-between mb-10 px-4 md:px-8">
-        <h1 className="text-3xl font-bold text-purple-700">{title}</h1>
+        <h1 className="text-4xl font-bold text-purple-700">{title}</h1>
         
         {mediaType && (
           <div className="flex space-x-4">
