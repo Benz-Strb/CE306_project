@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { Navigate } from 'react-router-dom';
 
-interface Movie {
+interface Movie { // interface เอาไว้กำหนดรูปแบบข้อมูลของ Movie
   id: number;
   title: string;
   imageUrl: string;
@@ -17,12 +17,12 @@ interface Movie {
 
 const AdminDashboard: React.FC = () => {
   const { isAdmin, isAuthenticated } = useAuth();
-  const [movies, setMovies] = useState<Movie[]>(() => {
+  const [movies, setMovies] = useState<Movie[]>(() => { // state เอาไว้เก็บรายการหนังที่โหลดมาจาก localStorage
     const saved = localStorage.getItem('admin-movies');
     return saved ? JSON.parse(saved) : [];
   });
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({ // state เอาไว้เก็บข้อมูลในฟอร์มเวลาจะเพิ่มหนังใหม่
     title: '',
     imageUrl: '',
     rating: '13+',
@@ -197,14 +197,15 @@ const AdminDashboard: React.FC = () => {
                 <select
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   value={formData.nationality}
-                  onChange={(e) => setFormData({...formData, nationality: e.target.value})}
+                  onChange={(e) => setFormData({...formData, nationality: e.target.value})} // อัพเดต nationality
+
                 >
                   {availableNationalities.map((nat) => (
                     <option key={nat} value={nat}>{nat}</option>
                   ))}
                 </select>
               </div>
-
+                {/* กรอกระยะเวลา / จำนวนตอน */}
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">
                   {formData.type === 'movie' ? 'ระยะเวลา *' : 'จำนวนตอน/ซีซั่น *'}
@@ -215,13 +216,8 @@ const AdminDashboard: React.FC = () => {
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                   placeholder={formData.type === 'movie' ? 'เช่น 124 min, 2 ชม. 15 นาที' : 'เช่น 4 Seasons, 16 ตอน'}
                   value={formData.episodes}
-                  onChange={(e) => setFormData({...formData, episodes: e.target.value})}
-                />
-                <p className="text-xs text-gray-500 mt-1">
-                  {formData.type === 'movie' 
-                    ? '💡 ตัวอย่าง: "124 min" หรือ "2 ชม. 15 นาที"' 
-                    : '💡 ตัวอย่าง: "4 Seasons" หรือ "16 ตอน"'}
-                </p>
+                  onChange={(e) => setFormData({...formData, episodes: e.target.value})} // อัพเดต episodes
+                /> 
               </div>
 
               <div>
@@ -280,7 +276,7 @@ const AdminDashboard: React.FC = () => {
                   onChange={(e) => setFormData({...formData, description: e.target.value})}
                 />
               </div>
-
+                {/* ปุ่มเพิ่มหนัง */}
               <button
                 type="submit"
                 className="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-all font-semibold shadow-md"
@@ -297,6 +293,7 @@ const AdminDashboard: React.FC = () => {
             </h2>
             
             <div className="space-y-3 max-h-[600px] overflow-y-auto">
+              {/* เช็คว่ามีรายการมั้ย */}
               {movies.length === 0 ? (
                 <p className="text-gray-500 text-center py-8">ยังไม่มีภาพยนตร์</p>
               ) : (
@@ -319,6 +316,7 @@ const AdminDashboard: React.FC = () => {
                         {movie.type === 'movie' ? '⏱️' : '📺'} {movie.episodes}
                       </p>
                     </div>
+                    {/* ปุ่มลบหนัง */}
                     <button
                       onClick={() => handleDelete(movie.id)}
                       className="text-red-600 hover:text-red-800 px-3"

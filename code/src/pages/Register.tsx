@@ -3,7 +3,7 @@ import { BsEye, BsEyeSlash } from 'react-icons/bs';
 import { Link, useNavigate } from 'react-router-dom';
 
 const Register: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({   // เก็บข้อมูลการสมัคร
     firstName: '',
     lastName: '',
     email: '',
@@ -11,27 +11,32 @@ const Register: React.FC = () => {
     confirmPassword: ''
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  // แยก state สำหรับ Pass และ ConfirmPass
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  
   const navigate = useNavigate();
 
   const handleChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData(prev => ({ ...prev, [field]: value }));   // อัพเดทฟิลด์นั้นๆ
     if (errors[field]) {
-      setErrors(prev => ({ ...prev, [field]: '' }));
+      setErrors(prev => ({ ...prev, [field]: '' }));      // ลบ error
     }
   };
 
+  // validate ข้อมูลทั้งหมด
   const validateForm = () => {
     const newErrors: Record<string, string> = {};
     
     if (!formData.firstName.trim()) newErrors.firstName = 'กรุณากรอกชื่อ';
     if (!formData.lastName.trim()) newErrors.lastName = 'กรุณากรอกนามสกุล';
+
     if (!formData.email.trim()) {
       newErrors.email = 'กรุณากรอกอีเมล';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'รูปแบบอีเมลไม่ถูกต้อง';
     }
+    
     if (!formData.password) {
       newErrors.password = 'กรุณากรอกรหัสผ่าน';
     } else if (formData.password.length < 6) {
@@ -47,26 +52,28 @@ const Register: React.FC = () => {
   };
 
   const handleSubmit = () => {
-    const newErrors = validateForm();
-    setErrors(newErrors);
+    const newErrors = validateForm();   // validate ทั้งหมด
+    setErrors(newErrors);               // แสดง error
     
-    if (Object.keys(newErrors).length === 0) {
+    if (Object.keys(newErrors).length === 0) {    // ถ้าไม่มี error
       console.log('สมัครสมาชิกด้วยข้อมูล:', formData);
       alert('สมัครสมาชิกสำเร็จ!');
-      navigate('/login');
+      navigate('/login');                         // ไปหน้า login
     }
   };
 
-  return (
-    <div className="flex justify-center items-center min-h-screen px-4 py-8">
+  return ( 
+    <div className="flex justify-center items-center min-h-screen px-4 py-8"> 
+        {/* Container หลัก จัดให้อยู่กึ่งกลางหน้าจอทั้งแนวตั้งและแนวนอน */}
       <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-md border border-purple-200">
         <h2 className="text-3xl font-bold text-left mb-2 text-purple-700">
           สมัครสมาชิก
         </h2>
         <p className="text-gray-600 text-sm mb-6">สร้างบัญชีของคุณเพื่อเริ่มต้นใช้งาน</p>
-
+        {/* ฟอร์ม input ต่าง ๆ */}
         <div className="space-y-4">
           <div className="grid grid-cols-2 gap-4">
+            {/* ช่องกรอกชื่อ */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">ชื่อ</label>
               <input
@@ -76,11 +83,13 @@ const Register: React.FC = () => {
                 value={formData.firstName}
                 onChange={(e) => handleChange('firstName', e.target.value)}
               />
+              {/* แสดงข้อความ error ถ้ามี */}
               {errors.firstName && (
                 <p className="text-red-600 text-xs mt-1">{errors.firstName}</p>
               )}
             </div>
 
+            {/* ช่องกรอกนามสกุล */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">นามสกุล</label>
               <input
@@ -103,13 +112,14 @@ const Register: React.FC = () => {
               type="email"
               placeholder="example@email.com"
               value={formData.email}
-              onChange={(e) => handleChange('email', e.target.value)}
+              onChange={(e) => handleChange('email', e.target.value)} // อัพเดตค่า state นามสกุล
             />
             {errors.email && (
               <p className="text-red-600 text-sm mt-1">{errors.email}</p>
             )}
           </div>
-
+          
+          {/* ช่องกรอกอีเมล */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">รหัสผ่าน</label>
             <div className="relative">
@@ -118,7 +128,7 @@ const Register: React.FC = () => {
                 type={showPassword ? 'text' : 'password'}
                 placeholder="••••••••"
                 value={formData.password}
-                onChange={(e) => handleChange('password', e.target.value)}
+                onChange={(e) => handleChange('password', e.target.value)} // อัพเดตค่า state email
               />
               <button
                 type="button"
@@ -132,7 +142,7 @@ const Register: React.FC = () => {
               <p className="text-red-600 text-sm mt-1">{errors.password}</p>
             )}
           </div>
-
+          {/* ช่องกรอกรหัสผ่าน */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">ยืนยันรหัสผ่าน</label>
             <div className="relative">
@@ -143,6 +153,7 @@ const Register: React.FC = () => {
                 value={formData.confirmPassword}
                 onChange={(e) => handleChange('confirmPassword', e.target.value)}
               />
+              {/* ปุ่ม toggle แสดงรหัสผ่าน */}
               <button
                 type="button"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
@@ -155,8 +166,9 @@ const Register: React.FC = () => {
               <p className="text-red-600 text-sm mt-1">{errors.confirmPassword}</p>
             )}
           </div>
+          
         </div>
-
+        
         <button
           onClick={handleSubmit}
           className="mt-6 w-full bg-gradient-to-r from-purple-500 to-yellow-400 text-white py-3 rounded-lg hover:from-purple-600 hover:to-yellow-500 transition-all font-semibold shadow-lg hover:shadow-xl transform hover:scale-[1.02]"

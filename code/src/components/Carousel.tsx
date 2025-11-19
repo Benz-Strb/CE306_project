@@ -8,34 +8,34 @@ interface CarouselProps {
   title?: string;
 }
 
-const Carousel: React.FC<CarouselProps> = ({ items, title }) => {
+const Carousel: React.FC<CarouselProps> = ({ items, title }) => { // เก็บ reference ของ container ที่ใช้เลื่อนแนวนอน
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);// ไว้เช็คว่าปุ่มซ้าย/ขวาควรขึ้นไหม
   const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const checkScroll = () => {
+  const checkScroll = () => { // ฟังก์ชันเช็คสถานะการเลื่อนของ container
     if (scrollRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-      setCanScrollLeft(scrollLeft > 0);
-      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 5); 
+      setCanScrollLeft(scrollLeft > 0); // ถ้า scrollLeft > 0 แปลว่าเลื่อนมาจากซ้ายแล้ว → ให้ปุ่มซ้ายโผล่
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 5); // ถ้ายังเลื่อนไปไม่สุด → ให้ปุ่มขวาโผล่
     }
   };
 
-  useEffect(() => {
+  useEffect(() => { // เช็คตอนเริ่ม + ตอนหน้าจอ resize
     checkScroll();
     const handleResize = () => checkScroll();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [items]);
 
-  const scroll = (direction: 'left' | 'right') => {
+  const scroll = (direction: 'left' | 'right') => { // ฟังก์ชันเลื่อนซ้าย/ขวา แบบ smooth
     if (scrollRef.current) {
       const scrollAmount = scrollRef.current.clientWidth * 0.7;
       scrollRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
       });
-      setTimeout(checkScroll, 300); 
+      setTimeout(checkScroll, 300); // หน่วงนิดนึงก่อนเช็คใหม่ ให้ scroll เสร็จก่อน
     }
   };
 
@@ -67,7 +67,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, title }) => {
         )}
         
         <div
-          ref={scrollRef}
+          ref={scrollRef} // กล่องเลื่อนแนวนอน
           onScroll={checkScroll}
           className="flex gap-4 overflow-x-auto overflow-y-visible scrollbar-hide px-4 md:px-8 scroll-smooth py-16"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
@@ -78,16 +78,8 @@ const Carousel: React.FC<CarouselProps> = ({ items, title }) => {
               className="flex-shrink-0 w-[45%] sm:w-[30%] md:w-[23%] lg:w-[18%] xl:w-[15%]"
               style={{ minHeight: '350px' }} 
             >
-              <Poster 
-                id={item.id}
-                imageUrl={item.imageUrl}
-                title={item.title}
-                rating={item.rating}
-                episodes={item.episodes}
-                genres={item.genres}
-                type={item.type}
-                trailerUrl={item.trailerUrl}
-              />
+              {/* ส่ง item เข้า Poster */}
+              <Poster media={item}/>  
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import type { Media } from "../types/types";
 
 const db: Media[] = [
-  // === Movies (id 1-59) ===
+  // Movies (id 1-999)
   {
     id: 1,
     imageUrl: "/poster/moive/Action/avengers-endgame.jpg",
@@ -713,7 +713,7 @@ const db: Media[] = [
     description: "หลังจากที่กองกำลังกบฏถูกโจมตีอย่างหนักบนดาวน้ำแข็งฮอธ ลุค สกายวอล์คเกอร์ ได้ไปฝึกฝนเจไดขั้นสูงกับอาจารย์โยดา ในขณะที่เพื่อนๆ ของเขาถูกดาร์ธ เวเดอร์ ไล่ล่า",
   },
 
-  // === Series (id 1000+) ===
+  // Series (id 1000+)
   {
     id: 1000,
     imageUrl: "/poster/series/Comedy/Barry.jpg",

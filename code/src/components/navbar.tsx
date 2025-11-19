@@ -4,19 +4,19 @@ import { useAuth } from '../context/AuthContext';
 import { BsPersonCircle, BsBoxArrowRight, BsChevronDown } from 'react-icons/bs';
 
 const Navbar: React.FC = () => {
-  const [open, setOpen] = useState(false);
-  const location = useLocation();
-  const navigate = useNavigate();
+  const [open, setOpen] = useState(false); // เก็บสถานะเมนูของมือถือ
+  const location = useLocation(); // เก็บ path ปัจจุบัน
+  const navigate = useNavigate(); // ใช้เปลี่ยนหน้า
   
-  const { user, logout, isAdmin } = useAuth();
+  const { user, logout, isAdmin } = useAuth(); // ข้อมูล user
 
-  const toggleMenu = () => setOpen(!open);
+  const toggleMenu = () => setOpen(!open); // สลับสถานะเมนูมือถือ
 
   const handleLinkClick = () => {
     setOpen(false);
   };
 
-  const handleLogout = () => {
+  const handleLogout = () => {    // ฟังก์ชันเมื่อ Logout
     logout();
     navigate('/login');
     setOpen(false);
@@ -25,12 +25,14 @@ const Navbar: React.FC = () => {
   const NavLink: React.FC<{ to: string; children: React.ReactNode; mobile?: boolean; isDropdown?: boolean }> = 
     ({ to, children, mobile = false, isDropdown = false }) => {
     
-    const isActive = location.pathname === to || 
+    // ตรวจสอบว่า path นี้ active อยู่มั้ย
+    const isActive = location.pathname === to ||
       (to === '/movies' && location.pathname.startsWith('/movies')) ||
       (to === '/series' && location.pathname.startsWith('/series')) ||
       (to === '/my-list' && location.pathname.startsWith('/my-list')) ||
       (to === '/admin' && location.pathname.startsWith('/admin'));
 
+    // กำหนด style
     const activeClass = 'text-purple-700 font-semibold';
     const inactiveClass = 'text-gray-700 hover:text-purple-600';
 
@@ -57,7 +59,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 p-4 shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+    <nav className="bg-gradient-to-r from-purple-100 via-purple-50 to-yellow-100 p-4 shadow-lg sticky top-0 z-[100] backdrop-blur-sm bg-opacity-95">
       <div className="w-full flex items-center justify-between md:justify-start md:space-x-8 px-4">
         <Link to="/" onClick={handleLinkClick} className="flex items-center bg-transparent border-none cursor-pointer">
           <div className="h-16 aspect-[2.5/1] rounded-lg flex items-center justify-center overflow-hidden">
@@ -75,8 +77,7 @@ const Navbar: React.FC = () => {
           {isAdmin && (
             <NavLink to="/admin">
               <span className="flex items-center space-x-1">
-                <span>🔐</span>
-                <span>Admin</span>
+                <span>🔐 Admin</span>
               </span>
             </NavLink>
           )}

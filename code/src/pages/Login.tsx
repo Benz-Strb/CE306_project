@@ -6,23 +6,23 @@ import { useAuth } from "../context/AuthContext";
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});
-  const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState<{ email?: string; password?: string }>({});  // เก็บ error แยกตามฟิลด์
+  const [showPassword, setShowPassword] = useState(false);  // ควบคุมการซ่อน, แสดงรหัสผ่าน
 
   const navigate = useNavigate();
   const { login } = useAuth();
 
   const handleSubmit = (event: React.MouseEvent) => {
     event.preventDefault();
-    const newErrors: { email?: string; password?: string } = {};
 
+    const newErrors: { email?: string; password?: string } = {};
+    // ถ้า email, password ว่างสักช่อง เพิ่ม error message ถ้ากรอกครบ {}
     if (!email) newErrors.email = "กรุณากรอกอีเมล";
     if (!password) newErrors.password = "กรุณากรอกรหัสผ่าน";
-
     setErrors(newErrors);
 
-    if (Object.keys(newErrors).length === 0) {
-      login(email);
+    if (Object.keys(newErrors).length === 0) { // ถ้าไม่มี error เลย
+      login(email);           // เรียก login() จาก AuthContext เพื่อบันทึกลง localStorage
       alert("เข้าสู่ระบบสำเร็จ!");
       navigate("/");
     }
@@ -51,7 +51,7 @@ const Login: React.FC = () => {
               placeholder="example@email.com"
               value={email}
               onChange={(e) => {
-                setEmail(e.target.value);
+                setEmail(e.target.value);     // อัพเดทค่า
                 if (errors.email)
                   setErrors((prev) => ({ ...prev, email: undefined }));
               }}
@@ -76,7 +76,7 @@ const Login: React.FC = () => {
                 placeholder="••••••••"
                 value={password}
                 onChange={(e) => {
-                  setPassword(e.target.value);
+                  setPassword(e.target.value);      // อัพเดทค่า
                   if (errors.password)
                     setErrors((prev) => ({ ...prev, password: undefined }));
                 }}
@@ -106,6 +106,7 @@ const Login: React.FC = () => {
           เข้าสู่ระบบ
         </button>
 
+        {/* Link ไปที่ register */}
         <div className="mt-6 text-center">
           <p className="text-gray-600 text-sm">
             ยังไม่มีบัญชี?{" "}
